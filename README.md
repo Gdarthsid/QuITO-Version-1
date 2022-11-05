@@ -30,6 +30,6 @@ A template to the numerical solver is specified in the template folder and multi
 
 The examples have several files --- <br>
 example.m -- contains system specifications, constraint profile etc <br>
-options.m file -- contains integration schemes, solver options, etc. 
-postProcess.m -- contains options on how to plot
+options.m file -- contains integration schemes, solver options, etc. <br>
+postProcess.m -- contains options on how to plot <br>
 main.m -- the main-file that the user need to run by specifying  solver specifications :number of steps and D
