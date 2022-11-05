@@ -26,4 +26,10 @@ Next, unzip the package source files into the desired folder, and add the includ
 
 ## How to use?
 
-Have a look at the problems in the examples folder.
+A template to the numerical solver is specified in the template folder and multiple examples have been solved in the examples folder. <br> 
+
+The examples have several files --- <br>
+example.m -- contains system specifications, constraint profile etc <br>
+options.m file -- contains integration schemes, solver options, etc. 
+postProcess.m -- contains options on how to plot
+main.m -- the main-file that the user need to run by specifying  solver specifications :number of steps and D
