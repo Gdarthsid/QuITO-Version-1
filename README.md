@@ -28,11 +28,11 @@ Next, unzip the package source files into the desired folder, and add the includ
 
 A template to the numerical solver is specified in the template folder and multiple examples have been solved in the examples folder. <br> 
 
-The examples have several files --- <br>
-example.m -- contains system specifications, constraint profile etc <br>
-options.m file -- contains integration schemes, solver options, etc. <br>
-postProcess.m -- contains options on how to plot <br>
-main.m -- the main-file that the user need to run by specifying  solver specifications :number of steps and D
+The examples contains the following files: <br>
 
-The Ipopt (Interior Point Optimizer) solver is recommended for Non-linear Optimization and is already available within CasADI. <br>
-For details visit : https://coin-or.github.io/Ipopt/
+* example.m: contains system specifications, constraint profile etc., specific to an example;
+* options.m : contains integration schemes, solver options, etc.
+* postProcess.m: contains options for plotting the state-action trajectories
+* main.m: the main/primary file that the user need to run by specifying number of steps (consequently h>0) and D>0.
+
+The Ipopt (Interior Point Optimizer) solver is recommended for Non-linear Optimization and is already available within CasADI. For details visit : https://coin-or.github.io/Ipopt/
