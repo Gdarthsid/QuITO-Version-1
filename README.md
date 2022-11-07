@@ -33,6 +33,6 @@ The examples contains the following files: <br>
 * example.m : contains system specifications, constraint profile etc., specific to an example;
 * options.m : contains integration schemes, solver options, etc.
 * postProcess.m : contains options for plotting the state-action trajectories
-* main.m : the main/primary file that the user need to run by specifying number of steps (consequently $\h>0$) and $ \D>0 $.
+* main.m : the main/primary file that the user need to run by specifying number of steps (consequently h>0) and D>0.
 
 The Ipopt (Interior Point Optimizer) solver is recommended for Non-linear Optimization and is already available within CasADI. For details visit : https://coin-or.github.io/Ipopt/
