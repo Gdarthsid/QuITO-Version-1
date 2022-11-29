@@ -17,8 +17,8 @@ QuITO is a numerical software package for solving optimal control problems direc
 
 ## How to install?
 
-First, you need to download CasADi which is an open-source tool for nonlinear optimization. This uses interior point based solver IPOPT for solving the nonlinear problems. Install CasADi by downloading the source code and adding it to MATLAB’s path.<br>
-For details visit: https://web.casadi.org/get/
+The solver uses CasADi, which is an open-source framework for nonlinear optimization, for its optmization routine. CasADi can be downloaded from here: https://web.casadi.org/get/. Install CasADi by downloading the source code and adding it to MATLAB’s path.<br>
+
 
 Next, unzip the package source files into the desired folder, and add the included ‘src’ folder and its all subfolders to MATLAB's path directory. It can be done in the following ways:
 - Access through the Set Path button on Home ribbon and add the subfolders or,
