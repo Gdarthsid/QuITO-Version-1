@@ -13,7 +13,7 @@ QuITO is a numerical software package for solving constrained nonlinear optimal 
 
 ## How to install?
 
-The solver uses CasADi, which is an open-source framework for nonlinear optimization, for its optmization routine. CasADi can be downloaded from here: https://web.casadi.org/get/. Install CasADi by downloading the source code and adding it to MATLAB’s path.<br>
+The solver uses CasADi, which is an open-source framework for nonlinear optimization, for its optmization routine. CasADi can be downloaded from here: https://web.casadi.org/get. Install CasADi by downloading the source code and adding it to MATLAB’s path.<br>
 
 
 Next, unzip the package source files into the desired folder, and add the included ‘src’ folder and its all subfolders to MATLAB's path directory. It can be done in the following ways:
@@ -31,4 +31,4 @@ The examples contains the following files: <br>
 * postProcess.m : contains options for plotting the state-action trajectories
 * main.m : the main/primary file that the user need to run by specifying number of steps (consequently h>0) and D>0.
 
-The Ipopt (Interior Point Optimizer) solver is recommended for Non-linear Optimization and is already available within CasADI. For details visit : https://coin-or.github.io/Ipopt/
+The IPOPT (Interior Point Optimization) solver is recommended for nonlinear optimization problems and is already available within CasADI. For details visit: https://coin-or.github.io/Ipopt
