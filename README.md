@@ -2,6 +2,10 @@
  
 QuITO is a numerical software package for solving constrained nonlinear optimal control problems via direct optimization. The package is built on MATLAB and can be used for constrained trajectory optimization. The base algorithm for QuITO is a novel direct multiple shooting technique. QuITO can handle several types of linear/nonlinear constraints including state-control, mixed, and pathwise constraints.  
 
+## How to cite?
+In case you're using QuITO, consider citing the article: 
+Constrained trajectory synthesis via quasi-interpolation (https://ieeexplore.ieee.org/abstract/document/9992892)
+
 ## Contributors
 
 1) [Nakul Randad](https://nakulrandad.github.io/)
