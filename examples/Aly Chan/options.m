@@ -21,13 +21,14 @@ options.transcription='quito_collocation';
 
 % Select a generating function as per flag
 %---------------------------------------
-% Gaussian              (0)
-% Laguerre - Gaussian   (1) 
-% Hyperbolic secant     (2) 
-% Gaussian variant1     (3)
-% Gaussian variant2     (4)
-% Gaussian variant3     (5)
-options.generating_function=0;
+% Laguerre Gaussian order 2        (0)
+% Laguerre - Gaussian order 4      (1) 
+% Laguerre - Gaussian order 6      (2) 
+% Hermite-polynomial order 10      (3)
+% Jacobi polynomial order 6        (4)
+% Jacobi polynomial order 10       (5)
+% Hyperbolic secant                (6) 
+options.generating_function=6;
 
 %% Discretization Method
 
