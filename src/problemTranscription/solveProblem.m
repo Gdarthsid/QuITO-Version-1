@@ -54,7 +54,7 @@ U = opti.variable(problem.nu, length(tau));
 
 % Quasi-interpolation
 D = options.variance;
-U_hat = @(t) M_hd_x(t, tau, U, h, D);
+U_hat = @(t) M_hd_x(t, tau, U, h, D, options);
 
 % Lagrange cost array and store U_hat at nodes and cost function quadrature
 U_app = opti.variable(problem.nu, length(tau));
@@ -163,26 +163,39 @@ solution.cost = opti.value(J);
 end
 
 % Function approximations
-function out = phi(t, tau_i, h, D)
+function out = phi(t, tau_i, h, D,options)
 %     app-app basis function
 % 
 %     Args:
 %         t: time
 %         tau_i: m_i*h
-
-    % Gaussian
-    out = (1 / (sqrt(pi * D))) * exp(-((t - tau_i) ^ 2) / (D * (h ^ 2)));
+    arg= (t-tau_i)/(h*sqrt(D));
     
-    % Laguerre - Gaussian
-    % out = (1 / (sqrt(pi * D))) * (3 -(3 *(norm(t-tau_i))^2 /(h^2*D) ) + 0.5 * (norm(t-tau_i))^4 / (h^4*D^2))* exp(-(norm(t-tau_i))^2/(D*h^2));
-
-    
+    if options.generating_function==0
+        % Gaussian
+        out = (1 / (sqrt(pi * D))) * exp(-arg^2);  %exp(-((t - tau_i) ^ 2) / (D * (h ^ 2)));
+    elseif options.generating_function==1
+        % Laguerre - Gaussian
+        out = (1 / (sqrt(pi * D))) * (3 -(3 *(norm(t-tau_i))^2 /(h^2*D) ) + 0.5 * (norm(t-tau_i))^4 / (h^4*D^2))* exp(-(norm(t-tau_i))^2/(D*h^2));
+    elseif options.generating_function==2
+        % hyperbolic secant
+        out = (1/pi*sqrt(D))* sech(h*arg);
+    elseif options.generating_function==3
+        % gaussian_variant1
+        out =  ((sqrt(exp(1)) / (sqrt(pi * D)))) * exp(-arg^2)* cos(sqrt(2)*arg);
+    elseif options.generating_function==4
+        % gaussian_variant2
+        out =  (1 / (sqrt(pi * D))) * exp(-arg^2)* (1.5-(arg^2)); 
+    elseif options.generating_function==5
+        % gaussian_variant3
+        out =  (1 / (sqrt(pi * D))) * exp(-arg^2)* ((315/128)-((105/16)*arg^2)+((63/16)*arg^4)-((3/4)*arg^6)+(arg^8/24));
+    end
 end
 
-function sum = M_hd_x(t, tau, collo_x, h, D)
+function sum = M_hd_x(t, tau, collo_x, h, D, options)
     sum = 0;
     for i = 1:length(tau)
         tau_i = tau(i);
-        sum = sum + collo_x(:,i) * phi(t, tau_i, h, D);
+        sum = sum + collo_x(:,i) * phi(t, tau_i, h, D, options);
     end
 end

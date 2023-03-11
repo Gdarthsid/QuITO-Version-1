@@ -19,6 +19,16 @@ function options = options(varargin)
 % - Quasi-Interpolation based collocation method ('quito_collocation')
 options.transcription='quito_collocation';
 
+% Select a generating function as per flag
+%---------------------------------------
+% Gaussian              (0)
+% Laguerre - Gaussian   (1) 
+% Hyperbolic secant     (2) 
+% Gaussian variant1     (3)
+% Gaussian variant2     (4)
+% Gaussian variant3     (5)
+options.generating_function=0;
+
 %% Discretization Method
 
 % Select a discretization method (integration scheme)
