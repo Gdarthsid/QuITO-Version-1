@@ -171,30 +171,30 @@ function out = phi(t, tau_i, h, D,options)
 %         tau_i: m_i*h
     arg= (t-tau_i)/(h*sqrt(D));
     
-    if options.generating_function==0
+    if options.generating_function==1
         % Gaussian order 2
         out = (1 / (sqrt(pi * D))) * exp(-arg^2);  %exp(-((t - tau_i) ^ 2) / (D * (h ^ 2)));
-    elseif options.generating_function==1
-        % lagguere-gaussian order 4
-        out =  (1 / (sqrt(pi * D))) * exp(-arg^2)* (1.5-(arg^2)); 
     elseif options.generating_function==2
-        % lagguere-gaussian order 6
-        out =  (0.5 / (sqrt(pi * D))) * exp(-arg^2)* ((15/4)-(5*arg^2)+ (0.5*arg^4)); 
+        % lagguere gaussian order 4
+        out =  (1 / (sqrt(pi * D))) * exp(-arg^2)* (1.5-(arg^2)); 
     elseif options.generating_function==3
-        % Hermite-polynomial order 10
+        % lagguere gaussian order 6
+        out =  (0.5 / (sqrt(pi * D))) * exp(-arg^2)* ((15/4)-(5*arg^2)+ (0.5*arg^4)); 
+    elseif options.generating_function==4
+        % Hermite polynomial order 10
         out =  (1 / (sqrt(pi * D))) * exp(-arg^2)* ((315/128)-((105/16)*arg^2)+((63/16)*arg^4)-((3/4)*arg^6)+(arg^8/24));
 %     elseif options.generating_function==1
-%         % Laguerre - Gaussian
+%         % Laguerre Gaussian
 %         out = (1 / (sqrt(pi * D))) * (3 -(3 *(norm(t-tau_i))^2 /(h^2*D) ) + 0.5 * (norm(t-tau_i))^4 / (h^4*D^2))* exp(-(norm(t-tau_i))^2/(D*h^2));
-    elseif options.generating_function==4
+    elseif options.generating_function==5
         % Jacobi polynomial order 6
         out =  (1 / (sqrt( D)))* (4/5)*(2-5*arg^2)*((1-arg^2)^2);
-    elseif options.generating_function==5
+    elseif options.generating_function==6
         % Jacobi polynomial order 10
         out =  (1 / (sqrt( D)))* (15/pi)*(1-6*arg^2+7*arg^4)*((1-arg^2)^2);
-    elseif options.generating_function==6
+    elseif options.generating_function==7
         % hyperbolic secant
-        out = (1/pi*sqrt(D))* sech(h*arg);
+        out = (1/pi*sqrt(D))* sech(arg);
 
     end
 

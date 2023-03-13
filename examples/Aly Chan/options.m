@@ -17,17 +17,17 @@ function options = options(varargin)
 % Select a transcription method
 %---------------------------------------
 % - Quasi-Interpolation based collocation method ('quito_collocation')
-options.transcription='quito_collocation';
+options.transcription='QuITO_collocation';
 
 % Select a generating function as per flag
 %---------------------------------------
-% Laguerre Gaussian order 2        (0)
-% Laguerre - Gaussian order 4      (1) 
-% Laguerre - Gaussian order 6      (2) 
-% Hermite-polynomial order 10      (3)
-% Jacobi polynomial order 6        (4)
-% Jacobi polynomial order 10       (5)
-% Hyperbolic secant                (6) 
+% Laguerre Gaussian order 2        (1)
+% Laguerre Gaussian order 4        (2) 
+% Laguerre Gaussian order 6        (3) 
+% Hermite polynomial order 10      (4)
+% Jacobi polynomial order 6        (5)
+% Jacobi polynomial order 10       (6)
+% Hyperbolic secant                (7) 
 options.generating_function=6;
 
 %% Discretization Method
