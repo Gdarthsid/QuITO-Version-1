@@ -17,7 +17,18 @@ function options = options(varargin)
 % Select a transcription method
 %---------------------------------------
 % - Quasi-Interpolation based collocation method ('quito_collocation')
-options.transcription='quito_collocation';
+options.transcription='QuITO';
+
+% Select a generating function as per flag
+%---------------------------------------
+% Laguerre Gaussian order 2        (1)
+% Laguerre Gaussian order 4        (2) 
+% Laguerre Gaussian order 6        (3) 
+% Hermite polynomial order 10      (4)
+% Jacobi polynomial order 6        (5)
+% Jacobi polynomial order 10       (6)
+% Hyperbolic secant                (7) 
+options.generating_function=1;
 
 %% Discretization Method
 
@@ -99,7 +110,7 @@ options.print.cost = 1;
 % 0: Do not plot
 % 1: Plot only action trajectory
 % 2: Plot all figures (state and input trajectory)
-options.plot = 1;
+options.plot = 2;
 
 %-------------- END CODE ---------------
 end

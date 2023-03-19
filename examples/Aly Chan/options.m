@@ -17,7 +17,7 @@ function options = options(varargin)
 % Select a transcription method
 %---------------------------------------
 % - Quasi-Interpolation based collocation method ('quito_collocation')
-options.transcription='QuITO_collocation';
+options.transcription='QuITO';
 
 % Select a generating function as per flag
 %---------------------------------------
@@ -28,7 +28,7 @@ options.transcription='QuITO_collocation';
 % Jacobi polynomial order 6        (5)
 % Jacobi polynomial order 10       (6)
 % Hyperbolic secant                (7) 
-options.generating_function=6;
+options.generating_function=1;
 
 %% Discretization Method
 

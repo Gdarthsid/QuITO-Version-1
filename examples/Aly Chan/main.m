@@ -16,7 +16,7 @@ close all;
 %% Set-up and solve problem
 
 problem = AlyChan;          % Fetch the problem definition
-opts = options(10, 2);        % Get options and solver settings (N,D),
+opts = options(20, 2);        % Get options and solver settings (N,D),
                                %where step size h=(tf-t0)/N
 solution = solveProblem(problem, opts);
 

@@ -15,7 +15,7 @@ clear all;close all;
 %% Set-up and solve problem
 
 problem = invertedPendulumOnCart;          % Fetch the problem definition
-options = options(100, 2);        % Get options and solver settings (N,D),
+options = options(30, 2);        % Get options and solver settings (N,D),
                                   %where step size h=(tf-t0)/N
 solution = solveInvertedPendulumOnCart(problem, options);
 

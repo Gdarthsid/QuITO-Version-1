@@ -17,7 +17,18 @@ function options = options(varargin)
 % Select a transcription method
 %---------------------------------------
 % - Quasi-Interpolation based collocation method ('quito_collocation')
-options.transcription='quito_collocation';
+options.transcription='QuITO';
+
+% Select a generating function as per flag
+%---------------------------------------
+% Laguerre Gaussian order 2        (1)
+% Laguerre Gaussian order 4        (2) 
+% Laguerre Gaussian order 6        (3) 
+% Hermite polynomial order 10      (4)
+% Jacobi polynomial order 6        (5)
+% Jacobi polynomial order 10       (6)
+% Hyperbolic secant                (7) 
+options.generating_function=1;
 
 %% Discretization Method
 
@@ -26,7 +37,7 @@ options.transcription='quito_collocation';
 % Euler method              ('euler')
 % Trapezoidal method        ('trapezoidal') 
 % Hermite-Simpson method    ('hermite') 
-% Runge-kutta method        ('RK4')
+% Runge-kutta 4 method      ('RK4')
 options.discretization='euler';
 
 %% NLP solver
