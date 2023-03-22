@@ -151,7 +151,7 @@ opti.minimize(J)  % minimise the objective function
 
 % NLP solver used here is ipopt
 opts = struct('ipopt',options.ipopt);
-opti.solver(options.NLPsolver, opts)  % backend NLP solver
+opti.solver(options.NLPsolver)%, opts)  % backend NLP solver
 
 disp('Starting to solve...')
 tic();
@@ -195,10 +195,10 @@ function out = phi(t, tau_i, h, D,options)
 %         out = (1 / (sqrt(pi * D))) * (3 -(3 *(norm(t-tau_i))^2 /(h^2*D) ) + 0.5 * (norm(t-tau_i))^4 / (h^4*D^2))* exp(-(norm(t-tau_i))^2/(D*h^2));
     elseif options.generating_function==5
         % Jacobi polynomial order 6
-        out =  (1 / (sqrt( D)))* (4/5)*(2-5*arg^2)*((1-arg^2)^2);
+        out =  (1 / (sqrt( D)))* (4/pi)*(2-5*arg^2)*((1-arg^2)^2);
     elseif options.generating_function==6
         % Jacobi polynomial order 10
-        out =  (1 / (sqrt( D)))* (15/6)*(1-(6*arg^2)+(7*arg^4))*((1-arg^2)^2);
+        out =  (1 / (sqrt( D)))* (15/pi)*(1-(6*arg^2)+(7*arg^4))*((1-arg^2)^2);
     elseif options.generating_function==7
         % hyperbolic secant
         out = (1/pi*sqrt(D))* sech(arg);

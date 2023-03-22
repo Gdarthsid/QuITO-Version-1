@@ -28,7 +28,7 @@ options.transcription='QuITO';
 % Jacobi polynomial order 6        (5)
 % Jacobi polynomial order 10       (6)
 % Hyperbolic secant                (7) 
-options.generating_function=5;
+options.generating_function=4;
 
 %% Discretization Method
 

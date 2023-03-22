@@ -16,7 +16,7 @@ close all;
 %% Set-up and solve problem
 
 problem = RobotPathPlanning;          % Fetch the problem definition
-opts = options(50, 2);        % Get options and solver settings (N,D),
+opts = options(20, 2);        % Get options and solver settings (N,D),
                                %where step size h=(tf-t0)/N
 % Emply custom solveproblem file to accomodate custom constraints
 solution = solveRobotPathPlanning(problem, opts);
