@@ -22,12 +22,12 @@ if options.NLPsolver == "ipopt"
 end
 
 if options.print.cost
-    disp(newline+"The objective cost is: "+num2str(solution.cost))
+    disp(newline+"The cost is: "+num2str(solution.cost))
 end
 
 % Extract optimal values
 X_out = zeros(problem.nx, num_of_steps + 1);
-U_out = zeros(problem.nu, num_of_steps); % last value of control not useful
+U_out = zeros(problem.nu, num_of_steps);
 for i = 1 : num_of_steps + 1
     X_out(:, i) = opti.value(X(:, i));
 end
@@ -42,8 +42,7 @@ if options.plot
     % Plot action trajectories
     for ui = 1 : problem.nu
         figure
-        % last value of control is not useful
-        plot(time_horizon(1:end-1), U_out(ui,:),'b','LineWidth',0.8);
+        plot(time_horizon(1:end-1), U_out(ui,:),'b','LineWidth',1);
         ylabel("Action trajectory");
         xlabel('Time [s]');
         xlim([problem.time.t0, problem.time.tf])
@@ -55,7 +54,7 @@ if options.plot
     if options.plot == 2
         for xi = 1 : problem.nx
             figure
-            plot(time_horizon, X_out(xi,:),'b','LineWidth',0.8);
+            plot(time_horizon, X_out(xi,:),'b','LineWidth',1);
             ylabel("State trajectory");
             xlabel('Time [s]');
             xlim([problem.time.t0, problem.time.tf])

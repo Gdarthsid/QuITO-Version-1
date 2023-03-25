@@ -46,7 +46,7 @@ options.discretization='euler';
 %---------------------------------------
 % IPOPT: recommended                            ('ipopt')
 % fmincon                                       ('fmincon')
-options.NLPsolver = 'sqpmethod';
+options.NLPsolver = 'ipopt';
 
 % IPOPT settings (if required)
 %---------------------------------------

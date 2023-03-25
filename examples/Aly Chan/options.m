@@ -16,7 +16,7 @@ function options = options(varargin)
 
 % Select a transcription method
 %---------------------------------------
-% - Quasi-Interpolation based collocation method ('quito_collocation')
+% - Quasi-Interpolation based trajectory optimization ('QuITO')
 options.transcription='QuITO';
 
 % Select a generating function as per flag
@@ -25,10 +25,8 @@ options.transcription='QuITO';
 % Laguerre Gaussian order 4        (2) 
 % Laguerre Gaussian order 6        (3) 
 % Hermite polynomial order 10      (4)
-% Jacobi polynomial order 6        (5)
-% Jacobi polynomial order 10       (6)
-% Hyperbolic secant                (7) 
-options.generating_function=4;
+% Hyperbolic secant order 2        (5) 
+options.generating_function=1;
 
 %% Discretization Method
 
@@ -44,8 +42,7 @@ options.discretization='euler';
 
 % Select a NLP solver
 %---------------------------------------
-% IPOPT: recommended                            ('ipopt')
-% fmincon                                       ('fmincon')
+% IPOPT: recommended                            ('ipopt')                                       
 options.NLPsolver = 'ipopt';
 
 % IPOPT settings (if required)
@@ -72,9 +69,7 @@ options.ipopt.limited_memory_max_history=6;   % Maximum size of the history for 
 options.ipopt.limited_memory_max_skipping=1;  % Threshold for successive iterations where update is skipped for the quasi-Newton approximation.
                                                % The valid range for this integer option is [1,+inf) and its default value is 2. 
 
-% fmincon settings (NOT RECOMMENDED!)
-%---------------------------------------
-% See website for detailed info
+
 
 %% Meshing Strategy
 

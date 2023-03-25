@@ -16,7 +16,7 @@ close all;
 %% Set-up and solve problem
 
 problem = RayleighProblemMixedConstraint; % Fetch the problem definition
-opts = options(30, 2);        % Get options and solver settings (N,D),
+opts = options(100, 2);        % Get options and solver settings (N,D),
                                %where step size h=(tf-t0)/N
 % Employ custom coded solveProblem file to accomodate Mixed state-control
 % constraint
