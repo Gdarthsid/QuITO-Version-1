@@ -47,7 +47,8 @@ if options.plot
         xlabel('Time [s]');
         xlim([problem.time.t0, problem.time.tf])
         grid on
-        legend("u"+num2str(ui));
+        label= sprintf('$u_{%d}$',ui);
+        legend(label,'Interpreter','Latex');
     end
     
     % Plot state trajectories
@@ -59,7 +60,8 @@ if options.plot
             xlabel('Time [s]');
             xlim([problem.time.t0, problem.time.tf])
             grid on
-            legend("x"+num2str(xi));
+            label= sprintf('$x_{%d}$',xi);
+            legend(label,'Interpreter','Latex');
         end
     end
 end

@@ -3,9 +3,9 @@ function options = options(varargin)
 %
 % Syntax:  options = options(varargin)
 %          When giving one input with varargin, e.g. with settings(20),will
-%          use D (variance of kernel) = 5 as default
+%          use D (variance of kernel) = 2 as default
 %          When giving two inputs with varargin, e.g. with settings(20, 2),
-%          number of steps will be 20 and D (variance of kernel) = 2
+%          number of steps will be 10 and D (variance of kernel) = 2
 %
 % Output:
 %    options - Structure containing the settings
@@ -16,15 +16,25 @@ function options = options(varargin)
 
 % Select a transcription method
 %---------------------------------------
-% - Quasi-Interpolation based collocation method ('quito_collocation')
-options.transcription='quito_collocation';
+% - Quasi-Interpolation based trajectory optimization ('QuITO')
+options.transcription='QuITO';
+
+% Select a generating function as per flag
+%---------------------------------------
+% Laguerre gaussian order 2        (1)
+% Laguerre gaussian order 4        (2) 
+% Laguerre gaussian order 6        (3) 
+% Hermite polynomial order 10      (4)
+% Trigonometric guassian order 4   (5)
+% Hyperbolic secant order 2        (6) 
+options.generating_function=1;
 
 %% Discretization Method
 
 % Select a discretization method (integration scheme)
 %---------------------------------------
 % Euler method              ('euler')
-% Trapezoidal method        ('trapezoidal')
+% Trapezoidal method        ('trapezoidal') 
 % Hermite-Simpson method    ('hermite') 
 % Runge-kutta 4 method      ('RK4')
 options.discretization='euler';
@@ -33,8 +43,7 @@ options.discretization='euler';
 
 % Select a NLP solver
 %---------------------------------------
-% IPOPT: recommended                            ('ipopt')
-% fmincon                                       ('fmincon')
+% IPOPT: recommended                            ('ipopt')                                       
 options.NLPsolver = 'ipopt';
 
 % IPOPT settings (if required)
@@ -61,14 +70,11 @@ options.ipopt.limited_memory_max_history=6;   % Maximum size of the history for 
 options.ipopt.limited_memory_max_skipping=1;  % Threshold for successive iterations where update is skipped for the quasi-Newton approximation.
                                                % The valid range for this integer option is [1,+inf) and its default value is 2. 
 
-% fmincon settings (NOT RECOMMENDED!)
-%---------------------------------------
-% See website for detailed info
+
 
 %% Meshing Strategy
 
 % Type of meshing
-%---------------------------------------
 % - fixed mesh ('fixed')
 options.meshstrategy='fixed';
 
@@ -78,7 +84,7 @@ if nargin == 2
     options.variance = varargin{2};   
 elseif nargin == 1
     options.nodes = varargin{1};
-    options.variance = 5; % D = 5 default
+    options.variance = 2; % D = 2 default
 else
     error("Takes in atmost 2 arguments (nodes [, variance])")
 end

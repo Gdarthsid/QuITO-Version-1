@@ -6,6 +6,7 @@
 % - Nakul Randad, Indian, Institute of Technology Bombay
 % - Siddhartha Ganguly, Indian Institute of Technology Bombay
 % - Rihan Aaron D'Silva, Indian Institute of Technology Bombay
+% - Mukesh Raj S, Indian Institute of Technology Bombay
 % Refer the article: S. Ganguly, N. Randad, D. Chatterjee, and R. Banavar
 % Constrained trajectory synthesis via quasi-interpolation, 
 % IEEE Conference on Decision & Control, 2022, Cancun, Mexico

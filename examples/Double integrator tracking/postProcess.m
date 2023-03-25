@@ -22,13 +22,13 @@ if options.NLPsolver == "ipopt"
 end
 
 if options.print.cost
-    disp(newline+"The objective cost is: "+num2str(solution.cost))
+    disp(newline+"The cost is: "+num2str(solution.cost))
 end
 time_horizon = linspace(problem.time.t0, problem.time.tf, num_of_steps+1);
 % Extract optimal values
 
 X_out = zeros(2, num_of_steps + 1);
-U_out = zeros(1, num_of_steps); % last value of control not useful
+U_out = zeros(1, num_of_steps);
 X_ref = zeros(2, num_of_steps + 1);
 error = zeros(2, num_of_steps + 1);
 for i = 1 : num_of_steps + 1
@@ -48,12 +48,11 @@ if options.plot
     % Plot action trajectories
     for ui = 1 : problem.nu
         figure
-        % last value of control is not useful
-        plot(time_horizon(1:end-1), U_out(ui,:),'b','LineWidth',0.8);
+        plot(time_horizon(1:end-1), U_out(ui,:),'b','LineWidth',1);
         ylabel("Action trajectory");
         xlabel('Time [s]');
         xlim([problem.time.t0, problem.time.tf])
-        grid on
+        grid on        
         % legend("u"+num2str(ui));
         hold on
         yline(-U_limit,'r--','LineWidth',1);
@@ -67,12 +66,13 @@ if options.plot
             figure
             grid on
             hold on       
-            plot(time_horizon, X_out(xi,:),'b','LineWidth',0.8);
+            plot(time_horizon, X_out(xi,:),'b','LineWidth',1);
             ylabel("State trajectory");
             xlabel('Time [s]');
             xlim([problem.time.t0, problem.time.tf])
-            plot(time_horizon, X_ref(xi,:),'--','LineWidth',0.8);
-            legend(["x"+num2str(xi) "x"+num2str(xi)+"_{ref}"]);
+            plot(time_horizon, X_ref(xi,:),'--','LineWidth',1);
+            label= sprintf('$x_{%d}$',xi);
+            legend(label,'Interpreter','Latex');
             hold off
         end
     end

@@ -21,11 +21,12 @@ options.transcription='QuITO';
 
 % Select a generating function as per flag
 %---------------------------------------
-% Laguerre Gaussian order 2        (1)
-% Laguerre Gaussian order 4        (2) 
-% Laguerre Gaussian order 6        (3) 
+% Laguerre gaussian order 2        (1)
+% Laguerre gaussian order 4        (2) 
+% Laguerre gaussian order 6        (3) 
 % Hermite polynomial order 10      (4)
-% Hyperbolic secant order 2        (5) 
+% Trigonometric guassian order 4   (5)
+% Hyperbolic secant order 2        (6) 
 options.generating_function=1;
 
 %% Discretization Method
