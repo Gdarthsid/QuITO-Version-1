@@ -39,8 +39,8 @@ problem.states.xl = [-inf -inf -inf];
 problem.states.xu = [inf inf inf];
 
 % Terminal state bounds. xfl=< xf <=xfu. If fixed: xfl == xfu
-problem.states.xfl = [1 0 0]; 
-problem.states.xfu = [1 0 0];
+problem.states.xfl = [-inf -inf -inf]; 
+problem.states.xfu = [inf inf inf];
 
 % Input bounds
 problem.inputs.ul = -1;
