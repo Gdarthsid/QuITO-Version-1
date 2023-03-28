@@ -36,3 +36,11 @@ The examples contains the following files: <br>
 * main.m : the main/primary file that the user need to run by specifying number of steps (consequently h>0) and D>0.
 
 The IPOPT (Interior Point Optimization) solver is recommended for nonlinear optimization problems and is already available within CasADI. For details visit: https://coin-or.github.io/Ipopt
+
+## Graphical User Interface
+
+### Installation
+The QuITO toolbox is packaged in form a MATLAB app with a Graphical Interface to ease the process of making use of the toolbox. To install the GUI, navigate to the [Graphical Interface](./Graphical%20Interface/) directory, and in that directory, find the installation file, [QuITO.mlappinstall](./Graphical%20Interface/QuITO.mlappinstall). Click on [QuITO.mlappinstall](./Graphical%20Interface/QuITO.mlappinstall), on which MATLAB prompts the user asking to install the application. Once the app is installed, the user can find it in the `APPS` section on MATLAB's toolbar on the top. 
+
+### Instructions to Use
+Before starting the app, make sure Casadi is installed and is properly imported onto MATLAB's path. The same can be verified using commands `path` and `ver` on the Command Window. Once that is verified, navigate to the base directory of QuITO, and open the MATLAB app named **QuITO** from the `APPS` section on MATLAB's toolbar at the top of the window. Here, the user can select his preferred Example Problem or even the User-Defined Template Problem from the dropdown, input values for _Number of Steps (N)_ and _Shape Parameter (D)_, and simply click on the _Run_ button. The user has to make sure the current working directory on MATLAB is always the base directory of QuITO toolbox.
