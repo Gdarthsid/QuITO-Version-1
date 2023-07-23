@@ -1,4 +1,4 @@
-## Formulate the Bryson Denham problem in QuITO 
+## Formulation of the Bryson Denham problem in QuITO 
 In problem definition file **BrysonDenham.m**, 
 First we provide the function handles for system dynamics with,
 ```matlab
