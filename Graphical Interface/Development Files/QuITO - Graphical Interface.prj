@@ -1,0 +1,71 @@
+<deployment-project plugin="plugin.apptool" plugin-version="1.0">
+  <configuration build-checksum="3016520067" file="C:\Users\mukes\Downloads\QuITO-Version-1\Graphical Interface\Development Files\QuITO - Graphical Interface.prj" location="C:\Users\mukes\Downloads\QuITO-Version-1\Graphical Interface\Development Files" name="QuITO - Graphical Interface" target="target.mlapps" target-name="Package App">
+    <param.appname>QuITO - Graphical Interface</param.appname>
+    <param.authnamewatermark>Mukesh Raj S</param.authnamewatermark>
+    <param.email />
+    <param.company />
+    <param.icon />
+    <param.icons />
+    <param.summary>Installation package for QuITO's Graphical User Interface.</param.summary>
+    <param.description>Use this package to install the QuITO GUI MATLAB app. Once installed, the app would be visible in the APPS section on MATLAB's toolbar with the name 'QuITO - Graphical Interface'. To make use of the GUI, kindly ensure that MATLAB's present working directory in QuITO base directory and that Casadi has been imported to MATLAB's path.</param.description>
+    <param.screenshot>C:\Users\mukes\AppData\Local\Temp\tp8bd67834_79ce_4188_8c1b_2c653f86bfaa.png</param.screenshot>
+    <param.version>1.0</param.version>
+    <param.products.name />
+    <param.products.id />
+    <param.products.version />
+    <param.platforms />
+    <param.output>C:\Users\mukes\Downloads\QuITO-Version-1\Graphical Interface</param.output>
+    <param.guid>80aed2d5-7515-4d4f-807a-f35ac580748d</param.guid>
+    <unset>
+      <param.authnamewatermark />
+      <param.email />
+      <param.company />
+      <param.icon />
+      <param.icons />
+      <param.version />
+      <param.products.name />
+      <param.products.id />
+      <param.products.version />
+      <param.platforms />
+    </unset>
+    <fileset.main>
+      <file>${PROJECT_ROOT}\QuITO_graphicalInterface.mlapp</file>
+    </fileset.main>
+    <fileset.depfun>
+      <file>${PROJECT_ROOT}\208-2087614_green-transparent-play-button-hd-png-download.png</file>
+      <file>C:\Users\mukes\Downloads\QuITO-Version-1\src\problemTranscription\solveProblem.m</file>
+    </fileset.depfun>
+    <fileset.resources />
+    <fileset.package />
+    <build-deliverables>
+      <file location="C:\Users\mukes\Downloads\QuITO-Version-1" name="Graphical Interface" optional="false">C:\Users\mukes\Downloads\QuITO-Version-1\Graphical Interface</file>
+    </build-deliverables>
+    <workflow />
+    <matlab>
+      <root>C:\Program Files\MATLAB\R2021b</root>
+      <toolboxes>
+        <toolbox name="matlabcoder" />
+      </toolboxes>
+      <toolbox>
+        <matlabcoder>
+          <enabled>true</enabled>
+        </matlabcoder>
+      </toolbox>
+    </matlab>
+    <platform>
+      <unix>false</unix>
+      <mac>false</mac>
+      <windows>true</windows>
+      <win2k>false</win2k>
+      <winxp>false</winxp>
+      <vista>false</vista>
+      <linux>false</linux>
+      <solaris>false</solaris>
+      <osver>10.0</osver>
+      <os32>false</os32>
+      <os64>true</os64>
+      <arch>win64</arch>
+      <matlab>true</matlab>
+    </platform>
+  </configuration>
+</deployment-project>
