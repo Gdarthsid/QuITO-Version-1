@@ -69,12 +69,12 @@ The Mayer cost (terminal cost) is defined in the function **terminalCost**:
 mayer = 0;
 ```
 After defining the problem data i.e., the dynamics, the constriants, and the objective we move towards setting up the optimization problem and other parameters in the  **options.m** file. 
-We define the default approximate approximation parameters (if not passed as input to the **options** function), with
+We define the default quasi-interpolation parameters (if not passed as input to the **options** function):
 ```matlab
 options.variance = 2; % D = 2 default
 generating_function_flag = 1; % default
 ```
-The desired generating function for the approximation is chosen as, 
+The desired generating function for the approximation is chosen as: 
 ```matlab
 % Select a generating function as per flag
 %---------------------------------------
@@ -86,7 +86,7 @@ The desired generating function for the approximation is chosen as,
 % Hyperbolic secant order 2        (6) 
 options.generating_function=generating_function_flag;
 ```
-The desired discretization scheme is chosen as, 
+The desired discretization scheme is chosen as: 
 ```matlab
 % Euler method              ('euler')
 % Trapezoidal method        ('trapezoidal') 
@@ -94,11 +94,11 @@ The desired discretization scheme is chosen as,
 % Runge-kutta 4 method      ('RK4')
 options.discretization='euler';
 ```
-For solving the NLP, the **IPOPT** solver is chosen with,
+For solving the nonlinear optimization problem we choose the interior point solver **IPOPT**:
 ```matlab
 options.NLPsolver = 'ipopt';
 ```
-and the associated IPOPT solver settings are chosen with, 
+The associated IPOPT solver settings are:
 ```matlab
 options.ipopt.tol=1e-9;
 options.ipopt.print_level=5;
@@ -108,11 +108,11 @@ options.ipopt.hessian_approximation='exact';
 options.ipopt.limited_memory_max_history=6;
 options.ipopt.limited_memory_max_skipping=1;
 ```
-Meshing options are chosen with,
+Meshing option is chosen as:
 ```matlab
 options.meshstrategy='fixed';
 ```
-Output setting are chosen with,
+We specify the following output and exit variables:
 ```matlab
 % Display computation time
 options.print.time = 1;
@@ -120,7 +120,7 @@ options.print.time = 1;
 % Display cost (objective) values
 options.print.cost = 1;
 ```
-and the plotting settings are chosen with,
+The plotting setting is specified:
 ```matlab
 % 0: Do not plot
 % 1: Plot only action trajectory
@@ -128,8 +128,8 @@ and the plotting settings are chosen with,
 options.plot = 2;
 ```
 ### Results
-Now in order to solve the optimization problem and observe the results, we run the main file **main.m**.
-First, we fetch the problem and options, solve the resultant NLP with,
+Finally, in order to solve the optimization problem and observe the results, we run the main file **main.m**.
+We fetch the problem and options and consequently solve the resultant NLP:
 ```matlab
 %% Set-up and solve problem
 
@@ -138,7 +138,7 @@ options = options(100, 2);        % Get options and solver settings (N,D),
                                %where step size h=(tf-t0)/N
 solution = solveProblem(problem, options);
 ```
-and plot the results by using the **postprocess.m** file with,
+We plot the results by using the **postprocess.m** file:
 ```matlab
 postProcess(solution, problem, opts)
 ```
