@@ -69,6 +69,11 @@ and Mayer cost (terminal cost) is defined in the function **terminalCost** with,
 mayer = x(3);
 ```
 
+
+
+
+
+
 After defining the dynamics, and the optimization problem, We now define the optimization and other QuITO parameters in the  **options.m** file.
 We define the default approximate approximation parameters (if not passed as input to the **options** function), with
 ```matlab
