@@ -46,10 +46,10 @@ The IPOPT (Interior Point Optimization) solver is recommended for nonlinear opti
 ## Graphical User Interface
 
 ### Installation
-The QuITO toolbox is packaged in form a MATLAB app with a Graphical Interface to ease the process of making use of the toolbox. To install the GUI, navigate to the [Graphical Interface](./Graphical%20Interface/) directory, and in that directory, find the installation file, [QuITO.mlappinstall](./Graphical%20Interface/QuITO.mlappinstall). Click on [QuITO.mlappinstall](./Graphical%20Interface/QuITO.mlappinstall), on which MATLAB prompts the user asking to install the application. Once the app is installed, the user can find it in the **APPS** section on MATLAB's toolbar on the top. 
+The QuITO toolbox is packaged in form a MATLAB app with a Graphical Interface to ease the process of making use of the toolbox. To install the GUI, navigate to the [Graphical Interface](./Graphical%20Interface/) directory, and in that directory, find the installation file, [QuITO - Graphical Interface.mlappinstall](./Graphical%20Interface/QuITO%20-%20Graphical%20Interface.mlappinstall). Clicking on which MATLAB throws a pop-up prompting the user to install the application. Once the app is installed, the user can find it in the **APPS** section on MATLAB's toolbar on the top. 
 
 ### Instructions to Use
-1) Before starting the app, make sure CasADI is installed and is properly imported onto MATLAB's path. The same can be verified using the commands `path` and `ver` on the Command Window.
+1) Before starting the app, please ensure CasADI is installed and correctly imported onto MATLAB's path. The same can be verified using the commands `path` and `ver` on the Command Window.
 2) Once verified, navigate to the base directory of QuITO, and open the MATLAB app named **QuITO** from the **APPS** section on MATLAB's toolbar at the top of the window.
 3) Here, the user can select his preferred Example Problem or even the User-Defined Template Problem from the dropdown, input values for _Number of Steps (N)_ and _Shape Parameter (D)_, and simply click on the _Run_ button.
-4) The user must ensure the current working directory on MATLAB is always the base directory of QuITO toolbox.
+4) The user must ensure the current working directory on MATLAB is always the [base directory](./) of the QuITO toolbox.
