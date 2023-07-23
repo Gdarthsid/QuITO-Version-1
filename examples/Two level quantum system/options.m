@@ -12,23 +12,6 @@ function options = options(varargin)
 
 %------------- BEGIN CODE --------------
 
-%% Approximate approximations settings
-if nargin == 3
-    options.nodes = varargin{1};
-    options.variance = varargin{2};
-    generating_function_flag = varargin{3};
-elseif nargin == 2
-    options.nodes = varargin{1};
-    options.variance = varargin{2};   
-    generating_function_flag = 1; % default  
-elseif nargin == 1
-    options.nodes = varargin{1};
-    options.variance = 2; % D = 2 default
-    generating_function_flag = 1; % default
-else
-    error("Takes in atmost 3 arguments (nodes, variance, basis function)")
-end
-
 %% Transcription Method
 
 % Select a transcription method
@@ -44,7 +27,7 @@ options.transcription='QuITO';
 % Hermite polynomial order 10      (4)
 % Trigonometric guassian order 4   (5)
 % Hyperbolic secant order 2        (6) 
-options.generating_function=generating_function_flag;
+options.generating_function=1;
 
 %% Discretization Method
 
@@ -94,6 +77,17 @@ options.ipopt.limited_memory_max_skipping=1;  % Threshold for successive iterati
 % Type of meshing
 % - fixed mesh ('fixed')
 options.meshstrategy='fixed';
+
+%% Approximate approximations settings
+if nargin == 2
+    options.nodes = varargin{1};
+    options.variance = varargin{2};   
+elseif nargin == 1
+    options.nodes = varargin{1};
+    options.variance = 2; % D = 2 default
+else
+    error("Takes in atmost 2 arguments (nodes [, variance])")
+end
 
 %% Output settings
 
