@@ -1,2 +1,2 @@
 ## Formulate the Aly Chanproblem in QuITO 
-**In problem definition file BangBang.m**
+In problem definition file **BangBang.m**
