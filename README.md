@@ -13,7 +13,6 @@ Constrained trajectory synthesis via quasi-interpolation (https://ieeexplore.iee
 3) [Rihan Aaron D'Silva](https://www.linkedin.com/in/rihan-aaron-d-silva/)
 4) [Mukesh Raj S](https://www.linkedin.com/in/mukesh-raj-s-658117221/)
 5) [Debasish Chatterjee](https://www.sc.iitb.ac.in/~chatterjee/master/homepage/index.html)
-6) [Ravi Banavar](https://www.sc.iitb.ac.in/~banavar/)
 ---
 
 ## How to install?
