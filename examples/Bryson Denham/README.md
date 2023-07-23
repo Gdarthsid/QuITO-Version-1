@@ -94,7 +94,7 @@ The desired discretization scheme is chosen as:
 % Runge-kutta 4 method      ('RK4')
 options.discretization='euler';
 ```
-For solving the nonlinear optimization problem we choose the interior point solver **IPOPT**:
+For solving the optimization problem we choose the interior point solver **IPOPT**:
 ```matlab
 options.NLPsolver = 'ipopt';
 ```
@@ -120,7 +120,7 @@ options.print.time = 1;
 % Display cost (objective) values
 options.print.cost = 1;
 ```
-The plotting setting is specified:
+The plotting setting is specified as:
 ```matlab
 % 0: Do not plot
 % 1: Plot only action trajectory
