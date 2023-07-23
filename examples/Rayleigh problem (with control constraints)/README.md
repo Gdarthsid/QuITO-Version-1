@@ -132,10 +132,10 @@ We fetch the problem and options and consequently solve the resultant NLP:
 ```matlab
 %% Set-up and solve problem
 
-problem = invertedPendulumOnCart;          % Fetch the problem definition
-options = options(100, 2);        % Get options and solver settings (N,D),
-                                  %where step size h=(tf-t0)/N
-solution = solveProblem(problem, options);
+problem = RayleighProblemControlConstraints; % Fetch the problem definition
+opts = options(100, 2);        % Get options and solver settings (N,D),
+                               %where step size h=(tf-t0)/N
+solution = solveProblem(problem, opts);
 ```
 We plot the results by using the [postProcess.m](./postProcess.m) file:
 ```matlab
