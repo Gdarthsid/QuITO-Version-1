@@ -66,6 +66,16 @@ The Mayer cost (terminal cost) is defined in the function **terminalCost**:
 ```matlab
 mayer = 0;
 ```
+In order to incorporate mixed constraints, a copy of **src/problemTranscription/solveProblem.m** file, named **solveRayleighProblemMixedConstraint.m**  is added in this directory, with the following additional lines , 
+```matlab
+% Mixed state-control Constraint
+for uid = 1 : problem.nu          
+    for i = 1 : num_of_steps + 1
+        opti.subject_to(U_app(uid, i)+ X(1, i)/6 <= 0 );
+    end
+end
+```
+
 After defining the problem data i.e., the dynamics, the constraints, and the objective we move towards setting up the optimization problem and other parameters in the  **options.m** file. 
 We define the default quasi-interpolation parameters (if not passed as input to the **options** function):
 ```matlab
