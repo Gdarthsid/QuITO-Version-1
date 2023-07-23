@@ -38,7 +38,7 @@ options.transcription='QuITO';
 
 % Select a generating function as per flag
 %---------------------------------------
-% Gaussian order 2        (1)
+% Gaussian order 2                 (1)
 % Laguerre gaussian order 4        (2) 
 % Laguerre gaussian order 6        (3) 
 % Hermite polynomial order 10      (4)
