@@ -135,9 +135,9 @@ We fetch the problem and options and consequently solve the resultant NLP:
 ```matlab
 %% Set-up and solve problem
 
-problem = BrysonDenham;          % Fetch the problem definition
-options = options(100, 2);        % Get options and solver settings (N,D),
-                               %where step size h=(tf-t0)/N
+problem =  DoubleIntTrack;          % Fetch the problem definition
+options = options(100,2);    % Get options and solver settings (N,D),
+                                    %where step size h=(tf-t0)/N
 solution = solveProblem(problem, options);
 ```
 We plot the results by using the [postProcess.m](./postProcess.m) file:
