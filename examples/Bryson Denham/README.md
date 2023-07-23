@@ -59,7 +59,7 @@ Next, we define the system dynamics by specifying the respective ODEs in the fun
 dx1 = x(2);
 dx2 = u(1);
 ```
-The lagrange cost is defined in the function **stageCost**:
+The Lagrange cost is defined in the function **stageCost**:
 ```matlab
 u1 = u(1);
 lag = 0.5 * (u1 ^ 2);
