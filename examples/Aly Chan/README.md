@@ -120,13 +120,14 @@ options.print.time = 1;
 % Display cost (objective) values
 options.print.cost = 1;
 ```
-and the Plotting settings are chosen with,
+and the plotting settings are chosen with,
 ```matlab
 % 0: Do not plot
 % 1: Plot only action trajectory
 % 2: Plot all figures (state and input trajectory)
 options.plot = 2;
 ```
+### Results
 Now in order to solve the optimization problem and observe the results, we run the main file **main.m**.
 First, we fetch the problem and options, solve the resultant NLP with,
 ```matlab
