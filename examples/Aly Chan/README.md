@@ -4,7 +4,7 @@ In problem definition file **AlyChan.m**, we first encode the function handles f
 % Set system dynamics
 problem.dynamicsFunc = @dynamics;
 ```
-Define the cost function:
+Function handles for the cost function:
 ```matlab
 % Set Lagrange cost (Stagewise cost) to be minimized
 problem.stageCost = @stageCost;
