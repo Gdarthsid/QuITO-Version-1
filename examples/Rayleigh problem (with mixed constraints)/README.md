@@ -1,5 +1,5 @@
 ## Formulation of the Rayleigh problem (with mixed constraints) in QuITO 
-In the problem definition file **BrysonDenham.m**, we first encode the function handles for system dynamics:
+In the problem definition file **RayleighProblemMixedConstraint.m**, we first encode the function handles for system dynamics:
 ```matlab
 % Set system dynamics
 problem.dynamicsFunc = @dynamics;
