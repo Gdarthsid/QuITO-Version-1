@@ -4,7 +4,7 @@ In the problem definition file **BrysonDenham.m**, we first encode the function 
 % Set system dynamics
 problem.dynamicsFunc = @dynamics;
 ```
-and Cost definitions with, 
+Define the cost function:  
 ```matlab
 % Set Lagrange cost (Stagewise cost) to be minimized
 problem.stageCost = @stageCost;
@@ -12,7 +12,7 @@ problem.stageCost = @stageCost;
 % Set Mayer cost (Terminal cost)
 problem.terminalCost = @terminalCost;
 ```
-Next we define the time variables with,
+Specify the time variables with:
 ```matlab
 % Initial time. t0<tf. NOTE: t_0 has to be zero.
 problem.time.t0 = 0; 
@@ -20,7 +20,7 @@ problem.time.t0 = 0;
 % Final time. tf is fixed.
 problem.time.tf = 1;
 ```
-We define state and control dimensions with
+Specify the state and control dimension:
 ```matlab
 % Number of states.
 problem.nx = 2;
@@ -28,47 +28,47 @@ problem.nx = 2;
 % Number of inputs.
 problem.nu = 1;
 ```
-For **state variables**, we specify initial conditions, 
+For **state variables** we specify initial conditions: 
 ```matlab
 % Initial conditions for system. Bounds if x0 is free s.t. x0l=< x0 <=x0u
 % If fixed, x0l == x0u
 problem.states.x0l = [0 1]; 
 problem.states.x0u = [0 1]; 
 ```
-state bounds,
+State bounds:
 ```matlab
 % State bounds. xl=< x <=xu
 limit = 1/9;
 problem.states.xl = [-inf -inf];
 problem.states.xu = [limit inf];
 ```
-and terminal state bounds.
+Terminal state bounds:
 ```matlab
 % Terminal state bounds. xfl=< xf <=xfu. If fixed: xfl == xfu
 problem.states.xfl = [0 -1]; 
 problem.states.xfu = [0 -1];
 ```
-For **control variables**, we specify bounds,
+For **control variables** we specify bounds:
 ```matlab
 % Input bounds
 problem.inputs.ul = -inf;
 problem.inputs.uu = inf;
 ```
-We then define the system dynamics by specifying the respective ODEs in the function **dynamics** with, 
+Next, we define the system dynamics by specifying the respective ODEs in the function **dynamics**: 
 ```matlab
 dx1 = x(2);
 dx2 = u(1);
 ```
-The lagrange cost is defined in the function **stageCost** with,
+The lagrange cost is defined in the function **stageCost**:
 ```matlab
 u1 = u(1);
 lag = 0.5 * (u1 ^ 2);
 ```
-and Mayer cost (terminal cost) is defined in the function **terminalCost** with,
+The Mayer cost (terminal cost) is defined in the function **terminalCost**:
 ```matlab
 mayer = 0;
 ```
-After defining the dynamics, and the optimization problem, We now define the optimization and other QuITO parameters in the  **options.m** file.
+After defining the problem data i.e., the dynamics, the constriants, and the objective we move towards setting up the optimization problem and other parameters in the  **options.m** file. 
 We define the default approximate approximation parameters (if not passed as input to the **options** function), with
 ```matlab
 options.variance = 2; % D = 2 default
