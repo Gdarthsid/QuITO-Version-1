@@ -135,7 +135,7 @@ opts = options(100, 2);        % Get options and solver settings (N,D),
                                %where step size h=(tf-t0)/N
 solution = solveProblem(problem, opts);
 ```
-We plot the results by using the **postprocess.m** file:
+We plot the results by using the **postProcess.m** file:
 ```matlab
 postProcess(solution, problem, opts)
 ```
