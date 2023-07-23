@@ -1,5 +1,5 @@
 ## Formulate the Aly Chan problem in QuITO 
-In problem definition file **AlyChan.m**
+In problem definition file **AlyChan.m**, 
 First we provide the function handles for system dynamics with,
 ```matlab
 % Set system dynamics
@@ -68,12 +68,6 @@ and Mayer cost (terminal cost) is defined in the function **terminalCost** with,
 ```matlab
 mayer = x(3);
 ```
-
-
-
-
-
-
 After defining the dynamics, and the optimization problem, We now define the optimization and other QuITO parameters in the  **options.m** file.
 We define the default approximate approximation parameters (if not passed as input to the **options** function), with
 ```matlab
