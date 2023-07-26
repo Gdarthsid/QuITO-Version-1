@@ -67,7 +67,7 @@ The Mayer cost (terminal cost) is defined in the function **terminalCost**:
 ```matlab
 mayer = x(3);
 ```
-After defining the problem data i.e., the dynamics, the constriants, and the objective we move towards setting up the optimization problem and other parameters in the **options.m** file. We define the default quasi-interpolation parameters (if not passed as input to the **options** function):
+After defining the problem data i.e., the dynamics, the constriants, and the objective we move towards setting up the optimization problem and other parameters in the [**options.m**](https://github.com/Gdarthsid/QuITO-Version-1/blob/main/examples/Aly%20Chan/options.m) file. We define the default quasi-interpolation parameters (if not passed as input to the **options** function):
 ```matlab
 options.variance = 2; % D = 2 default
 generating_function_flag = 1; % default
@@ -126,7 +126,7 @@ The plotting setting is specified as:
 options.plot = 2;
 ```
 ### Results
-Finally, in order to solve the optimization problem and observe the results, we run the main file **main.m**. We fetch the problem and options and consequently solve the resultant NLP:
+Finally, in order to solve the optimization problem and observe the results, we run the main file [**main.m**](https://github.com/Gdarthsid/QuITO-Version-1/blob/main/examples/Aly%20Chan/main.m). We fetch the problem and options and consequently solve the resultant NLP:
 ```matlab
 %% Set-up and solve problem
 
@@ -135,7 +135,7 @@ opts = options(100, 2);        % Get options and solver settings (N,D),
                                %where step size h=(tf-t0)/N
 solution = solveProblem(problem, opts);
 ```
-We plot the results by using the **postProcess.m** file:
+We plot the results by using the [**postProcess.m**](https://github.com/Gdarthsid/QuITO-Version-1/blob/main/examples/Aly%20Chan/postProcess.m) file:
 ```matlab
 postProcess(solution, problem, opts)
 ```
