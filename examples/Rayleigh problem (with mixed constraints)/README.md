@@ -1,5 +1,5 @@
 ## Formulation of the Rayleigh problem (with mixed constraints) in QuITO 
-In the problem definition file **RayleighProblemMixedConstraint.m**, we first encode the function handles for system dynamics:
+In the problem definition file [**RayleighProblemMixedConstraint.m**](https://github.com/Gdarthsid/QuITO-Version-1/blob/main/examples/Rayleigh%20problem%20(with%20mixed%20constraints)/RayleighProblemMixedConstraint.m), we first encode the function handles for system dynamics:
 ```matlab
 % Set system dynamics
 problem.dynamicsFunc = @dynamics;
@@ -66,7 +66,7 @@ The Mayer cost (terminal cost) is defined in the function **terminalCost**:
 ```matlab
 mayer = 0;
 ```
-In order to incorporate mixed constraints, a copy of **src/problemTranscription/solveProblem.m** file, named **solveRayleighProblemMixedConstraint.m**  is added in this directory, with the following additional lines , 
+In order to incorporate mixed constraints, a copy of [**src/problemTranscription/solveProblem.m**](https://github.com/Gdarthsid/QuITO-Version-1/blob/main/src/problemTranscription/solveProblem.m) file, named [**solveRayleighProblemMixedConstraint.m**](https://github.com/Gdarthsid/QuITO-Version-1/blob/main/examples/Rayleigh%20problem%20(with%20mixed%20constraints)/solveRayleighProblemMixedConstraint.m)  is added in this directory, with the following additional lines , 
 ```matlab
 % Mixed state-control Constraint
 for uid = 1 : problem.nu          
@@ -76,7 +76,7 @@ for uid = 1 : problem.nu
 end
 ```
 
-After defining the problem data i.e., the dynamics, the constraints, and the objective we move towards setting up the optimization problem and other parameters in the  **options.m** file. 
+After defining the problem data i.e., the dynamics, the constraints, and the objective we move towards setting up the optimization problem and other parameters in the  [**options.m**](https://github.com/Gdarthsid/QuITO-Version-1/blob/main/examples/Rayleigh%20problem%20(with%20mixed%20constraints)/options.m) file. 
 We define the default quasi-interpolation parameters (if not passed as input to the **options** function):
 ```matlab
 options.variance = 2; % D = 2 default
@@ -136,7 +136,7 @@ The plotting setting is specified as:
 options.plot = 2;
 ```
 ### Results
-Finally, in order to solve the optimization problem and observe the results, we run the main file **main.m**.
+Finally, in order to solve the optimization problem and observe the results, we run the main file [**main.m**](https://github.com/Gdarthsid/QuITO-Version-1/blob/main/examples/Rayleigh%20problem%20(with%20mixed%20constraints)/main.m).
 We fetch the problem and options and consequently solve the resultant NLP:
 ```matlab
 %% Set-up and solve problem
@@ -149,7 +149,7 @@ opts = options(100, 2);        % Get options and solver settings (N,D),
 % constraint
 solution = solveRayleighProblemMixedConstraint(problem, opts); 
 ```
-We plot the results by using the **postProcess.m** file:
+We plot the results by using the [**postProcess.m**](https://github.com/Gdarthsid/QuITO-Version-1/blob/main/examples/Rayleigh%20problem%20(with%20mixed%20constraints)/postProcess.m) file:
 ```matlab
 postProcess(solution, problem, opts)
 ```
