@@ -21,16 +21,16 @@ Constrained trajectory synthesis via quasi-interpolation (https://ieeexplore.iee
 
 ## How to install?
 
-QuITO uses CasADi, which is an open-source framework for nonlinear optimization, for its optimization routine. CasADi can be downloaded from here: https://web.casadi.org/get. Install CasADi by downloading the source code and adding it to MATLAB’s path, either through the Set Path button on MATLAB Home ribbon, or through the below command<br>
+QuITO uses CasADi, an open-source framework for nonlinear optimization, for its optimization routine. CasADi can be downloaded from here: https://web.casadi.org/get. 
+- Once the .zip file is downloaded from the mentioned webpage, extract the contents onto a desired folder.  
+- Navigate to that folder in MATLAB and execute the following commands in MATLAB Command Window: `addpath(genpath('<folder in which casadi files are extracted to>')); import casadi.*;` 
+
+To check CasADi installation, try executing the following lines in the MATLAB Command Window:
 ```
-addpath('<yourpath>/casadi-3.6.3-windows64-matlab2018b')
-```
-To check CasADi installation, run the following lines in the MATLAB terminal,
-```
-import casadi.*
 x = MX.sym('x')
 disp(jacobian(sin(x),x))
 ```
+If any error is thrown, this implies an irregular installation of CasADi and the user is advised to follow the above instructions again closely. Also, please keep in mind that CasADi might have to be imported to MATLAB every time MATLAB is restarted, depending on the user's system settings.
 
 
 Next, unzip the package source files into the desired folder, and add the included [src](./src/) folder and its all subfolders to MATLAB's path directory. It can be done in the following ways:
