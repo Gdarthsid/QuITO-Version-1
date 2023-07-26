@@ -1,5 +1,5 @@
 ## Formulation of the Aly Chan problem in QuITO 
-In problem definition file **AlyChan.m**, we first encode the function handles for system dynamics:
+In problem definition file [**AlyChan.m**](https://github.com/Gdarthsid/QuITO-Version-1/blob/main/examples/Aly%20Chan/AlyChan.m), we first encode the function handles for system dynamics:
 ```matlab
 % Set system dynamics
 problem.dynamicsFunc = @dynamics;
