@@ -1,5 +1,5 @@
 ## Formulation of the Robot Path Planning problem in QuITO 
-In the problem definition file **RobotPathPlanning.m**, we first encode the function handles for system dynamics:
+In the problem definition file [**RobotPathPlanning.m**](https://github.com/Gdarthsid/QuITO-Version-1/blob/main/examples/Robot%20Path%20Planning/RobotPathPlanning.m), we first encode the function handles for system dynamics:
 ```matlab
 % Set system dynamics
 problem.dynamicsFunc = @dynamics;
@@ -68,7 +68,7 @@ The Mayer cost (terminal cost) is defined in the function **terminalCost**:
 ```matlab
 mayer = 0;
 ```
-In order to incorporate path constraints as required by problem formulation, a copy of **src/problemTranscription/solveProblem.m** file, named **solveRobotPathPlanning.m**  is added in this directory, with the following additional lines , 
+In order to incorporate path constraints as required by problem formulation, a copy of [**src/problemTranscription/solveProblem.m**](https://github.com/Gdarthsid/QuITO-Version-1/blob/main/src/problemTranscription/solveProblem.m) file, named [**solveRobotPathPlanning.m**](https://github.com/Gdarthsid/QuITO-Version-1/blob/main/examples/Robot%20Path%20Planning/solveRobotPathPlanning.m)  is added in this directory, with the following additional lines , 
 ```matlab
 % Nonlinear path constraints
 a1 = 40; b1 = 20;
@@ -85,7 +85,7 @@ for i = 1 : num_of_steps + 1
 end
 ```
 
-After defining the problem data i.e., the dynamics, the constraints, and the objective we move towards setting up the optimization problem and other parameters in the  **options.m** file. 
+After defining the problem data i.e., the dynamics, the constraints, and the objective we move towards setting up the optimization problem and other parameters in the  [**options.m**](https://github.com/Gdarthsid/QuITO-Version-1/blob/main/examples/Robot%20Path%20Planning/options.m) file. 
 We define the default quasi-interpolation parameters (if not passed as input to the **options** function):
 ```matlab
 options.variance = 2; % D = 2 default
@@ -145,7 +145,7 @@ The plotting setting is specified as:
 options.plot = 2;
 ```
 ### Results
-Finally, in order to solve the optimization problem and observe the results, we run the main file **main.m**.
+Finally, in order to solve the optimization problem and observe the results, we run the main file [**main.m**](https://github.com/Gdarthsid/QuITO-Version-1/blob/main/examples/Robot%20Path%20Planning/main.m).
 We fetch the problem and options and consequently solve the resultant NLP:
 ```matlab
 %% Set-up and solve problem
@@ -157,7 +157,7 @@ opts = options(100, 2);        % Get options and solver settings (N,D),
 % Emply custom solveproblem file to accomodate custom constraints
 solution = solveRobotPathPlanning(problem, opts);
 ```
-We plot the results by using the **postProcess.m** file:
+We plot the results by using the [**postProcess.m**](https://github.com/Gdarthsid/QuITO-Version-1/blob/main/examples/Robot%20Path%20Planning/postProcess.m) file:
 ```matlab
 postProcess(solution, problem, opts)
 ```
