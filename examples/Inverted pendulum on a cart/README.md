@@ -1,5 +1,5 @@
 ## Formulation of the Inverted pendulum on a cart problem in QuITO 
-In the problem definition file [invertedPendulumOnCart.m](./invertedPendulumOnCart.m), we first encode the function handles for system dynamics:
+In the problem definition file [**invertedPendulumOnCart.m**](./invertedPendulumOnCart.m), we first encode the function handles for system dynamics:
 ```matlab
 % Set system dynamics
 problem.dynamicsFunc = @dynamics;
@@ -85,7 +85,7 @@ The Mayer cost (terminal cost) is defined in the function **terminalCost**:
 ```matlab
 mayer = 0;
 ```
-After defining the problem data i.e., the dynamics, the constriants, and the objective we move towards setting up the optimization problem and other parameters in the  [options.m](./options.m) file. 
+After defining the problem data i.e., the dynamics, the constriants, and the objective we move towards setting up the optimization problem and other parameters in the  [**options.m**](./options.m) file. 
 We define the default quasi-interpolation parameters (if not passed as input to the **options** function):
 ```matlab
 options.variance = 2; % D = 2 default
@@ -145,7 +145,7 @@ The plotting setting is specified as:
 options.plot = 2;
 ```
 ### Results
-Finally, in order to solve the optimization problem and observe the results, we run the main file [main.m](./main.m).
+Finally, in order to solve the optimization problem and observe the results, we run the main file [**main.m**](./main.m).
 We fetch the problem and options and consequently solve the resultant NLP:
 ```matlab
 %% Set-up and solve problem
@@ -155,7 +155,7 @@ options = options(100, 2);        % Get options and solver settings (N,D),
                                   %where step size h=(tf-t0)/N
 solution = solveProblem(problem, options);
 ```
-We plot the results by using the [postProcess.m](./postProcess.m) file:
+We plot the results by using the [**postProcess.m**](./postProcess.m) file:
 ```matlab
 postProcess(solution, problem, opts)
 ```
