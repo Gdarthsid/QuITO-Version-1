@@ -39,7 +39,7 @@ If any error is thrown, this implies an irregular installation of CasADi and the
 
 Next, download and unzip the QuITO package source files into a  desired folder, and add the included [src](./src/) folder and its all subfolders to MATLAB's path directory. It can be done in the following ways:
 - Access through the Set Path button on Home ribbon and add the subfolders or,
-- Open the package folder on MATLAB (which can be verified from the address field on the top). You can run `pwd` command on the MATLAB terminal to check whether the package directory is currently open. Then run the following command on the MATLAB terminal `addpath(genpath(fullfile(pwd, ‘src’)))` to add the [src](./src) folder and its subfolders to MATLAB’s path.
+- Open the package folder on MATLAB (which can be verified from the address field on the top). You can run `pwd` command on the MATLAB terminal to check whether the package directory is currently open. Then run the following command on the MATLAB terminal `addpath(genpath(fullfile(pwd, 'src')))` to add the [src](./src) folder and its subfolders to MATLAB’s path.
 
 ## How to use?
 
