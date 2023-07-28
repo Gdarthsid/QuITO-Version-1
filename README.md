@@ -24,9 +24,9 @@ VanderPol 2 & Nonlinear & No, Yes, No \\ \hline
 \end{tabular}
 \end{table}$$
 
-| Examples  | Dynamics | 
+| Examples  | Dynamics | State/Control/Mixed Constraints 
 | ------------- | ------------- |
-| Content Cell  | Content Cell  |
+|   | Content Cell  |
 | Content Cell  | Content Cell  |
 
 ## How to cite?
