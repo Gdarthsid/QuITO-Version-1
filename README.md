@@ -43,7 +43,7 @@ QuITO uses CasADi, an open-source framework for nonlinear optimization, for its 
 - Once the .zip file is downloaded from the mentioned webpage, extract the contents onto a desired folder.  
 - Navigate to that folder in MATLAB and execute the following commands in MATLAB Command Window:
 ```
-addpath(genpath('<folder in which casadi files are extracted to>'));
+addpath(genpath('<path to the folder in which CasADi files are extracted to>'));
 import casadi.*;
 ``` 
 
@@ -70,11 +70,11 @@ You can run the pre-loaded examples, formulate your own problems, and then solve
 The examples contain the following files: <br>
 
 * example.m: contains system specifications, constraint profile, etc., specific to an example;
-* options.m: contains integration schemes, solver options, etc;
+* options.m: contains integration schemes, solver options, etc.;
 * postProcess.m: contains options for plotting the state-action trajectories;
-* main.m: the main/primary file that the user needs to run by specifying the number of steps $N>0$ and the shape parameter $D>0$.
+* main.m: the main/primary file the user needs to run by specifying the number of steps $N>0$ and the shape parameter $D>0$.
 
-To solve any example problem the main.m file needs to be executed. We recommend the IPOPT (Interior Point Optimization) solver for nonlinear optimization problems, and is already available within CasADI. For details visit: https://coin-or.github.io/Ipopt.
+To solve any example problem, the main.m file needs to be executed. We recommend the IPOPT (Interior Point Optimization) solver for nonlinear optimization problems and is already available within CasADI. For details, visit: https://coin-or.github.io/Ipopt.
 
 Same steps need to be followed when the user wants to solve their own problems. Simply populate the example.m, options.m and postProcess,m files and execute the main.m file by setting the desirable parameters $(N,D)$. 
 
