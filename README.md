@@ -6,7 +6,7 @@ QuITO is a numerical software package for solving constrained nonlinear optimal 
 * Constraint: state, control, mixed (which can be a nonlinear function of states and control);
 * Boundary specification: boundary values, constraints of terminal states.
 
-| First Header  | Second Header | State/Control/Mixed Constraints | 
+| Problem  | Dynamics | State/Control/Mixed Constraints | 
 | ------------- | ------------- | ------------------------------- |
 | Aly Chan  | Nonlinear  |       No, Yes, No                         |
 | Bryson Denham  | Linear  |                Yes, No, No              |
