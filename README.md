@@ -26,15 +26,15 @@ VanderPol 2 & Nonlinear & No, Yes, No \\ \hline
 
 | First Header  | Second Header | State/Control/Mixed Constraints | 
 | ------------- | ------------- | ------------------------------- |
-| Content Cell  | Content Cell  |                             dv    |
-| Content Cell  | Content Cell  |                 vdfd                |
-| Content Cell  | Content Cell  |     Content Cell  |        
-| Content Cell  | Content Cell  | Content Cell  |
-| Content Cell  | Content Cell  | Content Cell  |
-| Content Cell  | Content Cell  | Content Cell  |
-| Content Cell  | Content Cell  | Content Cell  |
-| Content Cell  | Content Cell  | Content Cell  |
-| Content Cell  | Content Cell  | Content Cell  |
+| Aly Chan  | Nonlinear  |                             dv    |
+| Brysin Denham  | Linear  |                 vdfd                |
+| Double integrator tracking  | Linear  |     Content Cell  |        
+| Inverted pendulum on a cart  | Linear  | Content Cell  |
+| Rayleigh problem (with control constraints)  | Nonlinear  | Content Cell  |
+| Rayleigh problem (with mixed constraints)   | Nonlinear  | Content Cell  |
+| Robot Path Planning  | Linear  | Content Cell  |
+| VanDerPol control constrainted  | Nonlinear  | Content Cell  |
+| VanDerPol state constrainted  | Nonlinear  | Content Cell  |
 
 ## How to cite?
 In case you're using QuITO, consider citing the article: 
