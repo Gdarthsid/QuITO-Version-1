@@ -24,10 +24,10 @@ VanderPol 2 & Nonlinear & No, Yes, No \\ \hline
 \end{tabular}
 \end{table}$$
 
-| First Header  | Second Header |
-| ------------- | ------------- |
-| Content Cell  | Content Cell  |
-| Content Cell  | Content Cell  |
+| First Header  | Second Header | State/Control/Mixed Constraints | 
+| ------------- | ------------- | ------------------------------- |
+| Content Cell  | Content Cell  |                             dv    |
+| Content Cell  | Content Cell  |                 vdfd                |
 
 ## How to cite?
 In case you're using QuITO, consider citing the article: 
