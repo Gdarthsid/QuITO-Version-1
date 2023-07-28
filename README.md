@@ -10,7 +10,7 @@ The following table collects all the pre-loaded optimal control problem examples
 
 | Problem  | Dynamics | State/Control/Mixed Constraints | 
 | ------------- | ------------- | ------------------------------- |
-| [Aly Chan](./Aly%20Chan/)  | Nonlinear  |       No, Yes, No                         |
+| [Aly Chan](./examples/Aly%20Chan/)  | Nonlinear  |       No, Yes, No                         |
 | Bryson Denham  | Linear  |                Yes, No, No              |
 | Double integrator tracking  | Linear  |    Yes, Yes, No  |        
 | Inverted pendulum on a cart  | Linear  | Yes, Yes, No  |
