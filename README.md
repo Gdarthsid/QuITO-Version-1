@@ -6,35 +6,17 @@ QuITO is a numerical software package for solving constrained nonlinear optimal 
 * Constraint: state, control, mixed (which can be a nonlinear function of states and control);
 * Boundary specification: boundary values, constraints of terminal states.
 
-$$\begin{table}
-\caption{A list of problems available in QuITO}
-\begin{tabular}{|c|c|c|}
-\hline
-\begin{tabular}[c]{@{}c@{}}Examples\end{tabular} & Dynamics & \begin{tabular}[c]{@{}c@{}}State, control, and mixed \\ Constraints\end{tabular} \\ \hline
-\begin{tabular}[c]{@{}c@{}}Bryson \\ Denham\end{tabular} & Linear & Yes, No, No \\ \hline
-Aly chan & Nonlinear & No, Yes, No \\ \hline
-\begin{tabular}[c]{@{}c@{}}Double \\ Int. Tracking\end{tabular} & Linear  & Yes, Yes, No \\ \hline
-\begin{tabular}[c]{@{}c@{}}Inverted \\ pendulum on \\ a cart\end{tabular} & Linear  & Yes, Yes, No \\ \hline
-\begin{tabular}[c]{@{}c@{}}Rayleigh \\ problem 1\end{tabular} & Nonlinear & No, Yes, No \\ \hline
-\begin{tabular}[c]{@{}c@{}}Rayleigh \\ problem 2\end{tabular} & Nonlinear & No, No, Yes \\ \hline
-\begin{tabular}[c]{@{}c@{}}Robot path \\ planning\end{tabular} & Linear & Yes, No, No  \\ \hline
-VanderPol 1 & Nonlinear & Yes, No, No  \\ \hline
-VanderPol 2 & Nonlinear & No, Yes, No \\ \hline
-
-\end{tabular}
-\end{table}$$
-
 | First Header  | Second Header | State/Control/Mixed Constraints | 
 | ------------- | ------------- | ------------------------------- |
-| Aly Chan  | Nonlinear  |                             dv    |
-| Brysin Denham  | Linear  |                 vdfd                |
-| Double integrator tracking  | Linear  |     Content Cell  |        
-| Inverted pendulum on a cart  | Linear  | Content Cell  |
-| Rayleigh problem (with control constraints)  | Nonlinear  | Content Cell  |
-| Rayleigh problem (with mixed constraints)   | Nonlinear  | Content Cell  |
-| Robot Path Planning  | Linear  | Content Cell  |
-| VanDerPol control constrainted  | Nonlinear  | Content Cell  |
-| VanDerPol state constrainted  | Nonlinear  | Content Cell  |
+| Aly Chan  | Nonlinear  |       No, Yes, No                         |
+| Bryson Denham  | Linear  |                Yes, No, No              |
+| Double integrator tracking  | Linear  |    Yes, Yes, No  |        
+| Inverted pendulum on a cart  | Linear  | Yes, Yes, No  |
+| Rayleigh problem (with control constraints)  | Nonlinear  | No, Yes, No  |
+| Rayleigh problem (with mixed constraints)   | Nonlinear  | No, No, Yes |
+| Robot Path Planning  | Linear  | Yes, No, No  |
+| VanDerPol control constrainted  | Nonlinear  | No, Yes, No  |
+| VanDerPol state constrainted  | Nonlinear  | Yes, No, No  |
 
 ## How to cite?
 In case you're using QuITO, consider citing the article: 
