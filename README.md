@@ -11,14 +11,14 @@ The following table collects all the pre-loaded optimal control problem examples
 | Problem  | Dynamics | State/Control/Mixed Constraints | 
 | ------------- | ------------- | ------------------------------- |
 | [Aly Chan](./examples/Aly%20Chan/)  | Nonlinear  |       No, Yes, No                         |
-| Bryson Denham  | Linear  |                Yes, No, No              |
-| Double integrator tracking  | Linear  |    Yes, Yes, No  |        
-| Inverted pendulum on a cart  | Linear  | Yes, Yes, No  |
-| Rayleigh problem (with control constraints)  | Nonlinear  | No, Yes, No  |
-| Rayleigh problem (with mixed constraints)   | Nonlinear  | No, No, Yes |
-| Robot Path Planning  | Linear  | Yes, No, No  |
-| VanDerPol control constrainted  | Nonlinear  | No, Yes, No  |
-| VanDerPol state constrainted  | Nonlinear  | Yes, No, No  |
+| [Bryson Denham](./examples/Bryson%20Denham/)  | Linear  |                Yes, No, No              |
+| [Double integrator tracking](./examples/Double%20integrator%20tracking/)  | Linear  |    Yes, Yes, No  |        
+| [Inverted pendulum on a cart](./examples/Inverted%20pendulum%20on%20a%20cart/)  | Linear  | Yes, Yes, No  |
+| [Rayleigh problem (with control constraints)](./examples/Rayleigh%20problem%20(with%20control%20constraints)/)  | Nonlinear  | No, Yes, No  |
+| [Rayleigh problem (with mixed constraints)](./examples/Rayleigh%20problem%20(with%20mixed%20constraints)/)   | Nonlinear  | No, No, Yes |
+| [Robot Path Planning](./examples/Robot%20Path%20Planning/)  | Linear  | Yes, No, No  |
+| [VanDerPol control constrainted](./examples/VanDerPol%20control%20constrained/)  | Nonlinear  | No, Yes, No  |
+| [VanDerPol state constrainted](./examples/VanDerPol%20state%20constrained/)  | Nonlinear  | Yes, No, No  |
 
 ## How to cite?
 In case you're using QuITO, consider citing the article: 
