@@ -8,7 +8,7 @@ QuITO is a numerical software package for solving constrained nonlinear optimal 
 
 The following table collects all the pre-loaded optimal control problem examples in QuITO:
 
-| Problem  | Dynamics | State/Control/Mixed Constraints | 
+| Problem | Dynamics | State/Control/Mixed Constraints | 
 | ------------- | ------------- | ------------------------------- |
 | [Aly Chan](./examples/Aly%20Chan/)  | Nonlinear  |       No, Yes, No                         |
 | [Bryson Denham](./examples/Bryson%20Denham/)  | Linear  |                Yes, No, No              |
