@@ -2,11 +2,27 @@
  
 QuITO is a numerical software package for solving constrained nonlinear optimal control problems via direct optimization. The package is built on MATLAB and can be used for constrained trajectory optimization. The base algorithm for QuITO is a novel direct multiple shooting technique that employs a special kind of quasi-interpolation technique to approximate the control trajectory. Currently, QuITO can handle the following problem specifications: 
 
-$\dot{x}$
-
 * Dynamics (ODEs): linear, nonlinear;
 * Constraint: state, control, mixed (which can be a nonlinear function of states and control);
 * Boundary specification: boundary values, constraints of terminal states.
+
+\begin{table}
+\caption{A list of problems available in QuITO}
+\begin{tabular}{|c|c|c|}
+\hline
+\begin{tabular}[c]{@{}c@{}}Examples\end{tabular} & Dynamics & \begin{tabular}[c]{@{}c@{}}State, control, and mixed \\ Constraints\end{tabular} \\ \hline
+\begin{tabular}[c]{@{}c@{}}Bryson \\ Denham\end{tabular} & Linear & Yes, No, No \\ \hline
+Aly chan & Nonlinear & No, Yes, No \\ \hline
+\begin{tabular}[c]{@{}c@{}}Double \\ Int. Tracking\end{tabular} & Linear  & Yes, Yes, No \\ \hline
+\begin{tabular}[c]{@{}c@{}}Inverted \\ pendulum on \\ a cart\end{tabular} & Linear  & Yes, Yes, No \\ \hline
+\begin{tabular}[c]{@{}c@{}}Rayleigh \\ problem 1\end{tabular} & Nonlinear & No, Yes, No \\ \hline
+\begin{tabular}[c]{@{}c@{}}Rayleigh \\ problem 2\end{tabular} & Nonlinear & No, No, Yes \\ \hline
+\begin{tabular}[c]{@{}c@{}}Robot path \\ planning\end{tabular} & Linear & Yes, No, No  \\ \hline
+VanderPol 1 & Nonlinear & Yes, No, No  \\ \hline
+VanderPol 2 & Nonlinear & No, Yes, No \\ \hline
+
+\end{tabular}
+\end{table}
 
 ## How to cite?
 In case you're using QuITO, consider citing the article: 
