@@ -1,9 +1,9 @@
 # QuITO: Quasi-Interpolation based Trajectory Optimization 
  
-QuITO is a numerical software package for solving constrained nonlinear optimal control problems via direct optimization. The package is built on MATLAB and can be used for constrained trajectory optimization. The base algorithm for QuITO is a novel direct multiple shooting technique which employs a special kind of quasi-interpolation technique to approximate the control trajectory. Currently QuITO can handle the following problem specifications: 
+QuITO is a numerical software package for solving constrained nonlinear optimal control problems via direct optimization. The package is built on MATLAB and can be used for constrained trajectory optimization. The base algorithm for QuITO is a novel direct multiple shooting technique that employs a special kind of quasi-interpolation technique to approximate the control trajectory. Currently, QuITO can handle the following problem specifications: 
 
-* Dynmaics (ODEs) : linear, nonlinear;
-* Constriant: state, control, mixed (which can be a nonlinear function of states and control);
+* Dynamics (ODEs): linear, nonlinear;
+* Constraint: state, control, mixed (which can be a nonlinear function of states and control);
 * Boundary specification: boundary values, constraints of terminal states.
 
 ## How to cite?
@@ -38,19 +38,19 @@ If any error is thrown, this implies an irregular installation of CasADi and the
 
 
 Next, download and unzip the QuITO package source files into a  desired folder, and add the included [src](./src/) folder and its all subfolders to MATLAB's path directory. It can be done in the following ways:
-- Access through the Set Path button on Home ribbon and add the subfolders or,
+- Access through the Set Path button on the Home ribbon and add the subfolders or,
 - Open the package folder on MATLAB (which can be verified from the address field on the top). You can run `pwd` command on the MATLAB terminal to check whether the package directory is currently open. Then run the following command on the MATLAB terminal `addpath(genpath(fullfile(pwd, 'src')))` to add the [src](./src) folder and its subfolders to MATLAB’s path.
 
-## How to use?
+## How to use it?
 
 A template to the numerical solver is specified in the template folder and multiple examples have been solved in the examples folder. <br> 
 
-The examples contains the following files: <br>
+The examples contain the following files: <br>
 
-* example.m : contains system specifications, constraint profile etc., specific to an example;
-* options.m : contains integration schemes, solver options, etc.
-* postProcess.m : contains options for plotting the state-action trajectories
-* main.m : the main/primary file that the user needs to run by specifying number of steps (consequently h>0) and D>0.
+* example.m: contains system specifications, constraint profile, etc., specific to an example;
+* options.m: contains integration schemes, solver options, etc.
+* postProcess.m: contains options for plotting the state-action trajectories
+* main.m: the main/primary file that the user needs to run by specifying the number of steps (consequently h>0) and D>0.
 
 The IPOPT (Interior Point Optimization) solver is recommended for nonlinear optimization problems and is already available within CasADI. For details visit: https://coin-or.github.io/Ipopt
 
@@ -59,10 +59,10 @@ The IPOPT (Interior Point Optimization) solver is recommended for nonlinear opti
 ## Graphical User Interface
 
 ### Installation
-The QuITO toolbox is packaged in form a MATLAB app with a Graphical Interface to ease the process of making use of the toolbox. To install the GUI, navigate to the [Graphical Interface](./Graphical%20Interface/) directory, and in that directory, find the installation file, [QuITO - Graphical Interface.mlappinstall](./Graphical%20Interface/QuITO%20-%20Graphical%20Interface.mlappinstall). Clicking on which MATLAB throws a pop-up prompting the user to install the application. Once the app is installed, the user can find it in the **APPS** section on MATLAB's toolbar on the top. 
+The QuITO toolbox is packaged in the form of a MATLAB app with a Graphical Interface to ease the process of making use of the toolbox. To install the GUI, navigate to the [Graphical Interface](./Graphical%20Interface/) directory, and in that directory, find the installation file, [QuITO - Graphical Interface.mlappinstall](./Graphical%20Interface/QuITO%20-%20Graphical%20Interface.mlappinstall). Clicking on which MATLAB throws a pop-up prompting the user to install the application. Once the app is installed, the user can find it in the **APPS** section on MATLAB's toolbar on the top. 
 
 ### Instructions to Use
 1) Before starting the app, please ensure CasADI is installed and correctly imported onto MATLAB's path. The same can be verified using the commands `path` and `ver` on the Command Window.
 2) Once verified, navigate to the base directory of QuITO, and open the MATLAB app named **QuITO** from the **APPS** section on MATLAB's toolbar at the top of the window.
-3) Here, the user can select his preferred Example Problem or even the User-Defined Template Problem from the dropdown, input values for _Number of Steps (N)_ and _Shape Parameter (D)_, and simply click on the _Run_ button.
+3) Here, the user can select their preferred Example Problem or any User-Defined Template Problem from the dropdown, input values for _Number of Steps (N)_, _Shape Parameter (D)_, and _Generating function_, and simply click on the _Run_ button.
 4) The user must ensure the current working directory on MATLAB is always the [base directory](./) of the QuITO toolbox.
