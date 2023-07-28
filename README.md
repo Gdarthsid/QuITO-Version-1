@@ -20,7 +20,7 @@ The following table collects all the pre-loaded optimal control problem examples
 | [VanDerPol control constrainted](./examples/VanDerPol%20control%20constrained/)  | Nonlinear  | No, Yes, No  |
 | [VanDerPol state constrainted](./examples/VanDerPol%20state%20constrained/)  | Nonlinear  | Yes, No, No  |
 
-Implementation details for all the individual examples are given in their README.md files which found within their directories. Simply click and scroll down.
+Implementation details for all the individual examples are given in their README.md files which can be found within their directories. Simply click and scroll down.
 
 ## How to cite?
 In case you're using QuITO, consider citing the article: 
@@ -52,7 +52,7 @@ To check CasADi installation, try executing the following lines in the MATLAB Co
 x = MX.sym('x')
 disp(jacobian(sin(x),x))
 ```
-If any error is thrown, this implies an irregular installation of CasADi and the user is advised to follow the above instructions again closely. Also, please keep in mind that CasADi might have to be imported to MATLAB every time MATLAB is restarted, depending on the user's system settings.
+If any error is thrown, this implies an irregular installation of CasADi, and the user is advised to follow the above instructions again closely. Also, please keep in mind that CasADi might have to be imported to MATLAB every time MATLAB is restarted, depending on the user's system settings.
 
 
 Next, download and unzip the QuITO package source files into a  desired folder, and add the included [src](./src/) folder and its all subfolders to MATLAB's path directory. It can be done in the following ways:
@@ -63,7 +63,7 @@ Next, download and unzip the QuITO package source files into a  desired folder, 
 
 ### Step II (using QuITO): running the pre-loaded examples and adding your own problem
 
-You can run the pre-loaded examples and formulate your own problem and consequently solve it employing QuITO very easily. There are two ways to acheive that: 
+You can run the pre-loaded examples, formulate your own problems, and then solve it by employing QuITO easily. There are two ways to achieve that: 
 
 #### (a) Run the main.m file: 
 
@@ -74,9 +74,9 @@ The examples contain the following files: <br>
 * postProcess.m: contains options for plotting the state-action trajectories;
 * main.m: the main/primary file that the user needs to run by specifying the number of steps $N>0$ and the shape parameter $D>0$.
 
-To solve any example problem the main.m file need to be executed. We recommend the IPOPT (Interior Point Optimization) solver for nonlinear optimization problems and is already available within CasADI. For details visit: https://coin-or.github.io/Ipopt
+To solve any example problem the main.m file needs to be executed. We recommend the IPOPT (Interior Point Optimization) solver for nonlinear optimization problems, and is already available within CasADI. For details visit: https://coin-or.github.io/Ipopt
 
-Same steps need to be followed when the user want to solve their own problems. Simply populate the example.m, options.m and postProcess,m files and execute the main.m file by setting the desirable parameters $(N,D)$. 
+Same steps need to be followed when the user wants to solve their own problems. Simply populate the example.m, options.m and postProcess,m files and execute the main.m file by setting the desirable parameters $(N,D)$. 
 
 The other hassle free and quick option is to use the GUI. Have a look at the installation steps. 
 
