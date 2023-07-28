@@ -10,7 +10,7 @@ The following table collects all the pre-loaded optimal control problem examples
 
 | Problem  | Dynamics | State/Control/Mixed Constraints | 
 | ------------- | ------------- | ------------------------------- |
-| Aly Chan  | Nonlinear  |       No, Yes, No                         |
+| [Aly Chan](./Aly%20Chan/)  | Nonlinear  |       No, Yes, No                         |
 | Bryson Denham  | Linear  |                Yes, No, No              |
 | Double integrator tracking  | Linear  |    Yes, Yes, No  |        
 | Inverted pendulum on a cart  | Linear  | Yes, Yes, No  |
@@ -70,7 +70,7 @@ The IPOPT (Interior Point Optimization) solver is recommended for nonlinear opti
 
 ---
 
-## Graphical User Interface
+## Graphical User Interface 
 
 ### Installation
 The QuITO toolbox is packaged in the form of a MATLAB app with a Graphical Interface to ease the process of making use of the toolbox. To install the GUI, navigate to the [Graphical Interface](./Graphical%20Interface/) directory, and in that directory, find the installation file, [QuITO - Graphical Interface.mlappinstall](./Graphical%20Interface/QuITO%20-%20Graphical%20Interface.mlappinstall). Clicking on which MATLAB throws a pop-up prompting the user to install the application. Once the app is installed, the user can find it in the **APPS** section on MATLAB's toolbar on the top. 
