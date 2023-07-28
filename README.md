@@ -20,7 +20,7 @@ The following table collects all the pre-loaded optimal control problem examples
 | [VanDerPol control constrainted](./examples/VanDerPol%20control%20constrained/)  | Nonlinear  | No, Yes, No  |
 | [VanDerPol state constrainted](./examples/VanDerPol%20state%20constrained/)  | Nonlinear  | Yes, No, No  |
 
-Implementation details for all the individual examples are given in their README.md files which found within their directories. 
+Implementation details for all the individual examples are given in their README.md files which found within their directories. Simply click and scroll down.
 
 ## How to cite?
 In case you're using QuITO, consider citing the article: 
