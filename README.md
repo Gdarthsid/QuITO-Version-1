@@ -6,7 +6,7 @@ QuITO is a numerical software package for solving constrained nonlinear optimal 
 * Constraint: state, control, mixed (which can be a nonlinear function of states and control);
 * Boundary specification: boundary values, constraints of terminal states.
 
-\begin{table}
+$$\begin{table}
 \caption{A list of problems available in QuITO}
 \begin{tabular}{|c|c|c|}
 \hline
@@ -22,7 +22,7 @@ VanderPol 1 & Nonlinear & Yes, No, No  \\ \hline
 VanderPol 2 & Nonlinear & No, Yes, No \\ \hline
 
 \end{tabular}
-\end{table}
+\end{table}$$
 
 ## How to cite?
 In case you're using QuITO, consider citing the article: 
