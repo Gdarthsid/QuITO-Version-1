@@ -37,6 +37,7 @@ Constrained trajectory synthesis via quasi-interpolation (https://ieeexplore.iee
 
 ## How to install?
 
+# First step:
 QuITO uses CasADi, an open-source framework for nonlinear optimization, for its optimization routine. CasADi can be downloaded from here: https://web.casadi.org/get. 
 - Once the .zip file is downloaded from the mentioned webpage, extract the contents onto a desired folder.  
 - Navigate to that folder in MATLAB and execute the following commands in MATLAB Command Window:
