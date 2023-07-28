@@ -138,7 +138,7 @@ desktop.ini
 # OSX / *nix default autosave extension
 *.m~
 
-# Compiled MEX binaries (all platforms)
+# Compiled MEX binaries (all platform)
 *.mex*
 
 # Packaged app and toolbox files
