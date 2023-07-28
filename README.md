@@ -38,8 +38,6 @@ Constrained trajectory synthesis via quasi-interpolation (https://ieeexplore.iee
 
 ## How to install?
 
----
-
 ### Step I: install CasADi
 QuITO uses CasADi, an open-source framework for nonlinear optimization, for its optimization routine. CasADi can be downloaded from here: https://web.casadi.org/get. 
 - Once the .zip file is downloaded from the mentioned webpage, extract the contents onto a desired folder.  
@@ -67,8 +65,6 @@ Next, download and unzip the QuITO package source files into a  desired folder, 
 
 You can run the pre-loaded examples and formulate your own problem and consequently solve it employing QuITO very easily. There are two ways to acheive that: 
 
----
-
 #### (a) Run the main.m file: 
 
 The examples contain the following files: <br>
@@ -84,14 +80,13 @@ Same steps need to be followed when the user want to solve their own problems. S
 
 The other hassle free and quick option is to use the GUI. Have a look at the installation steps. 
 
----
 
 #### (b) Use the Graphical User Interface (GUI)
 
-### Installation
+#### Installation
 The QuITO toolbox is packaged in the form of a MATLAB app with a Graphical Interface to ease the process of making use of the toolbox. To install the GUI, navigate to the [Graphical Interface](./Graphical%20Interface/) directory, and in that directory, find the installation file, [QuITO - Graphical Interface.mlappinstall](./Graphical%20Interface/QuITO%20-%20Graphical%20Interface.mlappinstall). Clicking on which MATLAB throws a pop-up prompting the user to install the application. Once the app is installed, the user can find it in the **APPS** section on MATLAB's toolbar on the top. 
 
-### Instructions to Use
+#### Instructions to Use
 1) Before starting the app, please ensure CasADI is installed and correctly imported onto MATLAB's path. The same can be verified using the commands `path` and `ver` on the Command Window.
 2) Once verified, navigate to the base directory of QuITO, and open the MATLAB app named **QuITO** from the **APPS** section on MATLAB's toolbar at the top of the window.
 3) Here, the user can select their preferred Example Problem or any User-Defined Template Problem from the dropdown, input values for _Number of Steps (N)_, _Shape Parameter (D)_, and _Generating function_, and simply click on the _Run_ button.
