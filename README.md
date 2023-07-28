@@ -24,6 +24,11 @@ VanderPol 2 & Nonlinear & No, Yes, No \\ \hline
 \end{tabular}
 \end{table}$$
 
+| First Header  | Second Header |
+| ------------- | ------------- |
+| Content Cell  | Content Cell  |
+| Content Cell  | Content Cell  |
+
 ## How to cite?
 In case you're using QuITO, consider citing the article: 
 Constrained trajectory synthesis via quasi-interpolation (https://ieeexplore.ieee.org/abstract/document/9992892)
