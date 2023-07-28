@@ -62,9 +62,7 @@ Next, download and unzip the QuITO package source files into a  desired folder, 
 
 You can run the pre-loaded examples and formulate your own problem and solve it employing QuITO very easily. There are two ways to acheive that: 
 
-#### Running individual 
-
-A template to the numerical solver is specified in the template folder and multiple examples have been solved in the examples folder. <br> 
+#### (a) Running the main.m file: 
 
 The examples contain the following files: <br>
 
@@ -73,7 +71,9 @@ The examples contain the following files: <br>
 * postProcess.m: contains options for plotting the state-action trajectories
 * main.m: the main/primary file that the user needs to run by specifying the number of steps (consequently h>0) and D>0.
 
-The IPOPT (Interior Point Optimization) solver is recommended for nonlinear optimization problems and is already available within CasADI. For details visit: https://coin-or.github.io/Ipopt
+To solve any example problem the main.m file need to be executed. We recommend the IPOPT (Interior Point Optimization) solver for nonlinear optimization problems and is already available within CasADI. For details visit: https://coin-or.github.io/Ipopt
+
+Same steps need to be followed when the user want to solve their own problems. Simply populate the example.m, options.m and postProcess,m files and execute the main.m file by setting the desirable parameters $(N,D)$. 
 
 ---
 
