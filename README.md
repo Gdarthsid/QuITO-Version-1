@@ -24,7 +24,7 @@ VanderPol 2 & Nonlinear & No, Yes, No \\ \hline
 \end{tabular}
 \end{table}$$
 
-| First Header  | Second Header |
+| Examples  | Dynamics | 
 | ------------- | ------------- |
 | Content Cell  | Content Cell  |
 | Content Cell  | Content Cell  |
