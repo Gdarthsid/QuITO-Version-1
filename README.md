@@ -28,6 +28,13 @@ VanderPol 2 & Nonlinear & No, Yes, No \\ \hline
 | ------------- | ------------- | ------------------------------- |
 | Content Cell  | Content Cell  |                             dv    |
 | Content Cell  | Content Cell  |                 vdfd                |
+| Content Cell  | Content Cell  |     Content Cell  |        
+| Content Cell  | Content Cell  | Content Cell  |
+| Content Cell  | Content Cell  | Content Cell  |
+| Content Cell  | Content Cell  | Content Cell  |
+| Content Cell  | Content Cell  | Content Cell  |
+| Content Cell  | Content Cell  | Content Cell  |
+| Content Cell  | Content Cell  | Content Cell  |
 
 ## How to cite?
 In case you're using QuITO, consider citing the article: 
