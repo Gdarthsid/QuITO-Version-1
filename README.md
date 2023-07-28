@@ -62,7 +62,7 @@ Next, download and unzip the QuITO package source files into a  desired folder, 
 
 You can run the pre-loaded examples and formulate your own problem and solving it using QuITO very easily. There are two ways to acheive that: 
 
-*
+#### step
 
 A template to the numerical solver is specified in the template folder and multiple examples have been solved in the examples folder. <br> 
 
