@@ -24,7 +24,7 @@ Implementation details for all the individual examples are given in their README
 
 ## How to cite?
 In case you're using QuITO, consider citing the article: 
-Constrained trajectory synthesis via quasi-interpolation (https://ieeexplore.ieee.org/abstract/document/9992892)
+Constrained trajectory synthesis via quasi-interpolation (https://ieeexplore.ieee.org/abstract/document/9992892).
 
 ## Contributors
 
@@ -74,7 +74,7 @@ The examples contain the following files: <br>
 * postProcess.m: contains options for plotting the state-action trajectories;
 * main.m: the main/primary file that the user needs to run by specifying the number of steps $N>0$ and the shape parameter $D>0$.
 
-To solve any example problem the main.m file needs to be executed. We recommend the IPOPT (Interior Point Optimization) solver for nonlinear optimization problems, and is already available within CasADI. For details visit: https://coin-or.github.io/Ipopt
+To solve any example problem the main.m file needs to be executed. We recommend the IPOPT (Interior Point Optimization) solver for nonlinear optimization problems, and is already available within CasADI. For details visit: https://coin-or.github.io/Ipopt.
 
 Same steps need to be followed when the user wants to solve their own problems. Simply populate the example.m, options.m and postProcess,m files and execute the main.m file by setting the desirable parameters $(N,D)$. 
 
