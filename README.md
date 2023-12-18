@@ -24,8 +24,8 @@ Implementation details for all the individual examples are given in their README
 
 ## How to cite?
 In case you're using QuITO, consider citing the articles: 
-Constrained trajectory synthesis via quasi-interpolation, https://ieeexplore.ieee.org/abstract/document/9992892;
-QuITO: Numerical software for constrained nonlinear optimal control problems, https://www.sciencedirect.com/science/article/pii/S2352711023002534.
+1) Constrained trajectory synthesis via quasi-interpolation, https://ieeexplore.ieee.org/abstract/document/9992892
+2) QuITO: Numerical software for constrained nonlinear optimal control problems, https://www.sciencedirect.com/science/article/pii/S2352711023002534.
 
 ## Contributors
 
