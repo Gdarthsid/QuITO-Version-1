@@ -23,8 +23,9 @@ The following table collects all the pre-loaded optimal control problem examples
 Implementation details for all the individual examples are given in their README.md files which can be found within their directories. Simply click and scroll down.
 
 ## How to cite?
-In case you're using QuITO, consider citing the article: 
-Constrained trajectory synthesis via quasi-interpolation (https://ieeexplore.ieee.org/abstract/document/9992892).
+In case you're using QuITO, consider citing the articles: 
+Constrained trajectory synthesis via quasi-interpolation, https://ieeexplore.ieee.org/abstract/document/9992892;
+QuITO: Numerical software for constrained nonlinear optimal control problems, https://www.sciencedirect.com/science/article/pii/S2352711023002534.
 
 ## Contributors
 
